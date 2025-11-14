@@ -36,13 +36,13 @@ export default function CTASection() {
           initial={{ opacity: 0, scale: 0 }}
           animate={isInView ? { opacity: 0.1, scale: 1 } : {}}
           transition={{ duration: 1.5 }}
-          className="bg-primary absolute -left-40 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full blur-3xl"
+          className="bg-primary absolute -start-40 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full blur-3xl"
         />
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={isInView ? { opacity: 0.1, scale: 1 } : {}}
           transition={{ duration: 1.5, delay: 0.3 }}
-          className="bg-secondary absolute -right-40 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full blur-3xl"
+          className="bg-secondary absolute -end-40 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full blur-3xl"
         />
       </div>
 
@@ -84,7 +84,7 @@ export default function CTASection() {
             >
               <Link href={siteConfig.links.whatsapp} target="_blank">
                 {t("button")}
-                <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2" />
+                <ArrowRight className="ms-3 h-6 w-6 transition-transform group-hover:translate-x-2 rtl:rotate-180" />
               </Link>
             </Button>
           </motion.div>

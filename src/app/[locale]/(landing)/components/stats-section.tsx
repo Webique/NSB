@@ -119,7 +119,7 @@ export default function StatsSection() {
               >
                 <div className="from-primary/5 to-secondary/5 bg-linear-to-br relative overflow-hidden rounded-3xl p-12 shadow-lg transition-all duration-500 hover:shadow-2xl">
                   {/* Decorative Circle */}
-                  <div className="bg-primary/10 absolute -right-12 -top-12 h-48 w-48 rounded-full transition-all duration-500 group-hover:scale-150" />
+                  <div className="bg-primary/10 absolute -end-12 -top-12 h-48 w-48 rounded-full transition-all duration-500 group-hover:scale-150" />
 
                   <div className="relative text-center">
                     <div className="from-primary to-secondary bg-linear-to-br mb-4 bg-clip-text text-8xl font-bold text-transparent md:text-9xl">
@@ -157,8 +157,8 @@ export default function StatsSection() {
             </div>
 
             {/* Decorative Corners */}
-            <div className="absolute left-0 top-0 h-20 w-20 border-l-4 border-t-4 border-white/30" />
-            <div className="absolute bottom-0 right-0 h-20 w-20 border-b-4 border-r-4 border-white/30" />
+            <div className="absolute start-0 top-0 h-20 w-20 border-l-4 border-t-4 border-white/30" />
+            <div className="absolute bottom-0 end-0 h-20 w-20 border-b-4 border-r-4 border-white/30" />
           </motion.div>
         </motion.div>
 
@@ -189,7 +189,7 @@ export default function StatsSection() {
               </div>
 
               {/* Bottom Accent */}
-              <div className="from-primary to-secondary bg-linear-to-r absolute bottom-0 left-0 right-0 h-1 opacity-0 transition-opacity group-hover:opacity-100" />
+              <div className="from-primary to-secondary bg-linear-to-r absolute bottom-0 end-0 start-0 h-1 opacity-0 transition-opacity group-hover:opacity-100" />
             </motion.div>
           ))}
         </div>

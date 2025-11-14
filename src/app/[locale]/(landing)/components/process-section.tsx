@@ -71,11 +71,11 @@ export default function ProcessSection() {
                 >
                   {/* Content */}
                   <div
-                    className={`flex-1 ${isLeft ? "lg:pr-16 lg:text-right" : "lg:pl-16 lg:text-left"}`}
+                    className={`flex-1 ${isLeft ? "lg:pe-16 lg:text-right" : "lg:ps-16 lg:text-left"}`}
                   >
                     <div className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                       {/* Decorative Corner */}
-                      <div className="bg-primary/5 absolute right-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
+                      <div className="bg-primary/5 absolute end-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
 
                       <div className="relative">
                         <div className="mb-4 flex items-center gap-3">
@@ -93,7 +93,7 @@ export default function ProcessSection() {
                       </div>
 
                       {/* Bottom Accent */}
-                      <div className="from-primary to-secondary bg-linear-to-r absolute bottom-0 left-0 right-0 h-1 opacity-0 transition-opacity group-hover:opacity-100" />
+                      <div className="from-primary to-secondary bg-linear-to-r absolute inset-x-0 bottom-0 h-1 opacity-0 transition-opacity group-hover:opacity-100" />
                     </div>
                   </div>
 

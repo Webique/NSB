@@ -39,8 +39,8 @@ const PartnersSection = () => {
     <section id="partners" className="relative overflow-hidden bg-white py-32">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
-        <div className="bg-primary/5 absolute right-0 top-0 h-96 w-96 -translate-y-1/2 translate-x-1/2 rounded-full blur-3xl"></div>
-        <div className="bg-secondary/5 absolute bottom-0 left-0 h-96 w-96 -translate-x-1/2 translate-y-1/2 rounded-full blur-3xl"></div>
+        <div className="bg-primary/5 absolute end-0 top-0 h-96 w-96 -translate-y-1/2 translate-x-1/2 rounded-full blur-3xl"></div>
+        <div className="bg-secondary/5 absolute bottom-0 start-0 h-96 w-96 -translate-x-1/2 translate-y-1/2 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative">

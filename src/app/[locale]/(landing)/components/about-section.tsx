@@ -13,8 +13,8 @@ export default function AboutSection() {
   return (
     <section id="about" className="relative overflow-hidden bg-white py-32">
       {/* Decorative Background Elements */}
-      <div className="bg-primary/5 absolute right-0 top-0 h-96 w-96 -translate-y-1/2 translate-x-1/2 rounded-full blur-3xl" />
-      <div className="bg-secondary/5 absolute bottom-0 left-0 h-96 w-96 -translate-x-1/2 translate-y-1/2 rounded-full blur-3xl" />
+      <div className="bg-primary/5 absolute end-0 top-0 h-96 w-96 -translate-y-1/2 translate-x-1/2 rounded-full blur-3xl" />
+      <div className="bg-secondary/5 absolute bottom-0 start-0 h-96 w-96 -translate-x-1/2 translate-y-1/2 rounded-full blur-3xl" />
 
       <div className="container relative px-4">
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
@@ -55,7 +55,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-linear-to-br group relative overflow-hidden rounded-2xl border border-gray-100 from-gray-50 to-white p-6 shadow-sm transition-all hover:shadow-md"
               >
-                <div className="bg-primary/5 absolute right-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all group-hover:scale-150" />
+                <div className="bg-primary/5 absolute end-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all group-hover:scale-150" />
                 <div className="relative">
                   <div className="mb-3 flex items-center gap-3">
                     <div className="bg-primary h-1 w-8" />
@@ -75,7 +75,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="bg-linear-to-br group relative overflow-hidden rounded-2xl border border-gray-100 from-gray-50 to-white p-6 shadow-sm transition-all hover:shadow-md"
               >
-                <div className="bg-secondary/5 absolute right-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all group-hover:scale-150" />
+                <div className="bg-secondary/5 absolute end-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all group-hover:scale-150" />
                 <div className="relative">
                   <div className="mb-3 flex items-center gap-3">
                     <div className="bg-secondary h-1 w-8" />
@@ -99,8 +99,8 @@ export default function AboutSection() {
             className="relative"
           >
             {/* Decorative Frame */}
-            <div className="border-primary/20 absolute -right-6 -top-6 h-full w-full rounded-2xl border-4" />
-            <div className="border-secondary/20 absolute -bottom-6 -left-6 h-full w-full rounded-2xl border-4" />
+            <div className="border-primary/20 absolute -end-6 -top-6 h-full w-full rounded-2xl border-4" />
+            <div className="border-secondary/20 absolute -bottom-6 -start-6 h-full w-full rounded-2xl border-4" />
 
             {/* Main Image */}
             <div className="relative h-[600px] overflow-hidden rounded-2xl shadow-2xl">
@@ -119,7 +119,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, scale: 0 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-primary absolute -bottom-8 -right-8 rounded-2xl p-8 shadow-xl"
+              className="bg-primary absolute -bottom-8 -end-8 rounded-2xl p-8 shadow-xl"
             >
               <div className="text-center">
                 <div className="text-4xl font-bold text-white">15+</div>

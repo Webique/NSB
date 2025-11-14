@@ -55,7 +55,7 @@ export default function ContactSection() {
               className="group block"
             >
               <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-                <div className="bg-primary/5 absolute right-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
+                <div className="bg-primary/5 absolute end-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
 
                 <div className="relative">
                   <div className="from-primary/10 to-secondary/10 group-hover:from-primary group-hover:to-secondary bg-linear-to-br mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl transition-all group-hover:scale-110">
@@ -82,7 +82,7 @@ export default function ContactSection() {
               className="group block"
             >
               <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-                <div className="bg-primary/5 absolute right-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
+                <div className="bg-primary/5 absolute end-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
 
                 <div className="relative">
                   <div className="from-primary/10 to-secondary/10 group-hover:from-primary group-hover:to-secondary bg-linear-to-br mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl transition-all group-hover:scale-110">
@@ -110,7 +110,7 @@ export default function ContactSection() {
               className="group block"
             >
               <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-                <div className="bg-primary/5 absolute right-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
+                <div className="bg-primary/5 absolute end-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
 
                 <div className="relative">
                   <div className="from-primary/10 to-secondary/10 group-hover:from-primary group-hover:to-secondary bg-linear-to-br mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl transition-all group-hover:scale-110">

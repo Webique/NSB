@@ -6,7 +6,9 @@ interface SectionDividerProps {
   variant?: "primary" | "secondary" | "gradient";
 }
 
-export default function SectionDivider({ variant = "primary" }: SectionDividerProps) {
+export default function SectionDivider({
+  variant = "primary"
+}: SectionDividerProps) {
   const getGradient = () => {
     switch (variant) {
       case "primary":
@@ -34,7 +36,7 @@ export default function SectionDivider({ variant = "primary" }: SectionDividerPr
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-primary"
+        className="bg-primary absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rotate-45"
       />
     </div>
   );

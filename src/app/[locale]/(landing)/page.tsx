@@ -3,6 +3,7 @@ import type { Locale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
+import HeroSection from "@/app/[locale]/(landing)/components/hero-section";
 import WhatsAppFloat from "@/components/whats-app-float";
 
 import SectionDivider from "./components/section-divider";
@@ -15,7 +16,7 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
 
   return (
     <main>
-      {/* <HeroSection /> */}
+      <HeroSection />
       <SectionDivider variant="gradient" />
       {/* <AboutSection /> */}
       <SectionDivider variant="primary" />

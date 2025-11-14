@@ -67,7 +67,7 @@ export default function ValuesSection() {
               {/* Card */}
               <div className="relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
                 {/* Decorative Corner */}
-                <div className="bg-primary/10 absolute right-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
+                <div className="bg-primary/10 absolute end-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
 
                 {/* Icon/Image */}
                 <div className="relative mb-6 flex justify-center">
@@ -95,7 +95,7 @@ export default function ValuesSection() {
                 </p>
 
                 {/* Decorative Bottom Line */}
-                <div className="via-primary/50 bg-linear-to-r absolute bottom-0 left-0 right-0 h-1 from-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="via-primary/50 bg-linear-to-r absolute inset-x-0 bottom-0 h-1 from-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               </div>
 
               {/* Floating Number */}
@@ -103,7 +103,7 @@ export default function ValuesSection() {
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
-                className="bg-primary absolute -right-4 -top-4 flex h-12 w-12 items-center justify-center rounded-full text-2xl font-bold text-white shadow-lg"
+                className="bg-primary absolute -end-4 -top-4 flex h-12 w-12 items-center justify-center rounded-full text-2xl font-bold text-white shadow-lg"
               >
                 {index + 1}
               </motion.div>

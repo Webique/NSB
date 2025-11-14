@@ -18,18 +18,18 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center bg-black pt-20 lg:pt-24">
+    <section className="max-w-screen relative flex h-screen min-h-[600px] w-full items-center justify-center overflow-hidden bg-black/70 py-6">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <ExportedImage
-          src="/images/الملف التعريفي-نسب العقارية(1).pdf-image-061.jpg"
+          src="/images/hero.png"
           alt="NSB Real Estate"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-50"
           priority
         />
-        {/* Gradient Overlay */}
-        <div className="bg-linear-to-b absolute inset-0 from-black/85 via-black/70 to-black/85" />
+        {/* Gradient Overlay - Lighter for better visibility */}
+        <div className="bg-linear-to-b absolute inset-0 from-black/70 via-black/40 to-black/70" />
 
         {/* Decorative Grid Pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -41,15 +41,15 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.08, scale: 1 }}
+          animate={{ opacity: 0.15, scale: 1 }}
           transition={{ duration: 1.5 }}
-          className="bg-primary absolute right-0 top-1/4 h-[500px] w-[500px] rounded-full blur-3xl"
+          className="bg-primary absolute end-0 top-1/4 h-[700px] w-[700px] rounded-full blur-3xl"
         />
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.08, scale: 1 }}
+          animate={{ opacity: 0.15, scale: 1 }}
           transition={{ duration: 1.5, delay: 0.3 }}
-          className="bg-secondary absolute bottom-1/4 left-0 h-[500px] w-[500px] rounded-full blur-3xl"
+          className="bg-secondary absolute bottom-1/4 start-0 h-[700px] w-[700px] rounded-full blur-3xl"
         />
       </div>
 
@@ -61,9 +61,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="mb-10"
+            className="mb-6 md:mb-8"
           >
-            <div className="via-primary bg-linear-to-r mx-auto mb-8 h-1 w-32 from-transparent to-transparent" />
+            <div className="via-primary bg-linear-to-r mx-auto mb-4 h-1 w-24 from-transparent to-transparent md:mb-6 md:w-32" />
           </motion.div>
 
           <motion.div
@@ -71,7 +71,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            <h1 className="bg-linear-to-b mb-10 from-white via-white to-gray-400 bg-clip-text text-6xl font-bold leading-tight text-transparent md:text-7xl lg:text-8xl xl:text-9xl">
+            <h1 className="mb-4 text-4xl font-bold leading-tight text-white drop-shadow-2xl md:mb-6 md:text-5xl lg:text-6xl">
               {t("title")}
             </h1>
           </motion.div>
@@ -80,7 +80,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-primary mb-8 text-2xl font-light md:text-3xl lg:text-4xl"
+            className="text-primary mb-4 text-lg font-semibold [text-shadow:0_2px_8px_rgb(0_0_0/60%)] md:mb-6 md:text-xl lg:text-2xl"
           >
             {t("subtitle")}
           </motion.div>
@@ -89,14 +89,14 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="via-primary bg-linear-to-r mx-auto mb-8 h-px w-40 from-transparent to-transparent"
+            className="via-primary bg-linear-to-r mx-auto mb-4 h-px w-32 from-transparent to-transparent md:mb-6 md:w-40"
           />
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mx-auto mb-14 max-w-4xl text-xl leading-relaxed text-gray-300 md:text-2xl"
+            className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-gray-200 [text-shadow:0_2px_8px_rgb(0_0_0/60%)] md:mb-12 md:text-lg lg:text-xl"
           >
             {t("description")}
           </motion.p>
@@ -105,22 +105,22 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col gap-5 sm:flex-row sm:justify-center"
+            className="flex flex-col gap-3 sm:flex-row sm:justify-center md:gap-5"
           >
             <Button
               size="lg"
-              className="bg-primary shadow-primary/30 hover:shadow-primary/40 hover:bg-primary/90 group px-12 py-8 text-xl font-bold text-black shadow-2xl transition-all hover:scale-105"
+              className="bg-primary shadow-primary/40 hover:shadow-primary/50 hover:bg-primary texxtbase hover:sale-105 d:px-12 group px-8 py-6 font-bold text-black shadow-2xl transition-all md:py-7 md:text-lg"
               asChild
             >
               <Link href="#contact">
                 {t("cta")}
-                <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2" />
+                <ArrowRight className="ms-3 h-5 w-5 transition-transform group-hover:translate-x-2 rtl:rotate-180 rtl:group-hover:-translate-x-2" />
               </Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-primary/60 hover:border-primary hover:bg-primary/10 hover:shadow-primary/20 border-2 bg-transparent px-12 py-8 text-xl font-bold text-white backdrop-blur-sm transition-all hover:scale-105 hover:shadow-lg"
+              className="border-primary hover:border-primary hover:bg-primary/20 hover:shadow-primary/30 border-2 bg-white/10 px-8 py-6 text-base font-bold text-white backdrop-blur-md transition-all hover:scale-105 hover:shadow-xl md:px-12 md:py-7 md:text-lg"
               asChild
             >
               <Link href={siteConfig.links.whatsapp} target="_blank">
@@ -137,17 +137,15 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
         onClick={scrollToSection}
-        className="absolute bottom-10 left-1/2 z-10 -translate-x-1/2 cursor-pointer"
+        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 cursor-pointer sm:bottom-10"
         aria-label="Scroll to content"
       >
-        <motion.div
+        <motion.a
           animate={{ y: [0, 12, 0] }}
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center gap-3"
+          href="#about"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-gray-500">
-            استكشف
-          </span>
           <div className="border-primary/50 flex h-12 w-8 items-start justify-center rounded-full border-2 p-2">
             <motion.div
               animate={{ y: [0, 12, 0] }}
@@ -159,7 +157,7 @@ export default function HeroSection() {
               className="bg-primary h-2 w-2 rounded-full"
             />
           </div>
-        </motion.div>
+        </motion.a>
       </motion.button>
     </section>
   );
