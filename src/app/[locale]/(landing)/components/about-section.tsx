@@ -110,7 +110,7 @@ export default function AboutSection() {
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />
-              {/* Gradient Overlay */}
+              {/* linear Overlay */}
               <div className="bg-linear-to-t absolute inset-0 from-black/20 to-transparent" />
             </div>
 
@@ -119,11 +119,13 @@ export default function AboutSection() {
               initial={{ opacity: 0, scale: 0 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-primary absolute -bottom-8 -end-8 rounded-2xl p-8 shadow-xl"
+              className="bg-primary absolute -bottom-8 -start-8 rounded-2xl p-8 shadow-xl"
             >
               <div className="text-center">
                 <div className="text-4xl font-bold text-white">15+</div>
-                <div className="text-sm text-white/90">عاماً من الخبرة</div>
+                <div className="text-sm text-white/90">
+                  {t("yearsOfExperience")}
+                </div>
               </div>
             </motion.div>
           </motion.div>

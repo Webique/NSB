@@ -29,7 +29,7 @@ export default function SectionDivider({
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className={`mx-auto h-px w-full max-w-4xl bg-gradient-to-r ${getGradient()}`}
+        className={`bg-linear-to-r mx-auto h-px w-full max-w-4xl ${getGradient()}`}
       />
       <motion.div
         initial={{ scale: 0 }}
