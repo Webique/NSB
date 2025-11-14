@@ -11,20 +11,78 @@
       "ctaSecondary": "Contact Us"
     },
     "Stats": {
-      "years": "Years",
-      "experience": "Rich Experience",
-      "projects": "Projects",
-      "stories": "Tell Their Stories",
-      "investments": "Total Investments",
-      "sar": "SAR",
-      "cities": "Cities",
-      "buildings": "Buildings",
-      "quality": "Highest Standards of Excellence and Quality",
-      "units": "Residential Units",
-      "families": "Families",
-      "rooms": "Hotel Rooms",
-      "area": "Built Area",
-      "infrastructure": "Infrastructure"
+      "title": "Where Has NSB Reached?",
+      "mainStats": {
+        "years": {
+          "value": "15",
+          "suffix": "+",
+          "label": "Years of Rich Experience"
+        },
+        "projects": {
+          "value": "20",
+          "suffix": "+",
+          "label": "Projects Telling Their Stories"
+        }
+      },
+      "investment": {
+        "amount": "+450,000,000",
+        "label": "Total Investments (SAR)"
+      },
+      "detailedStats": {
+        "cities": {
+          "value": "5",
+          "label": "Cities",
+          "sublabel": "Riyadh – Jeddah – Makkah – Taif – Madinah"
+        },
+        "experience": {
+          "value": "15",
+          "label": "Years",
+          "sublabel": "Accumulated expertise in real estate fields"
+        },
+        "buildings": {
+          "value": "77",
+          "label": "Buildings",
+          "sublabel": "According to the highest standards of excellence and quality"
+        },
+        "upcomingProjects": {
+          "value": "10",
+          "label": "Projects",
+          "sublabel": "Under study to join the list of achievements soon"
+        },
+        "developedLand": {
+          "value": "50000",
+          "label": "m² Developed Land",
+          "sublabel": "Areas in continuous growth"
+        },
+        "residentialUnits": {
+          "value": "200",
+          "suffix": "+",
+          "label": "Residential Units",
+          "sublabel": "Enjoyed by more than 200 families"
+        },
+        "diverseProjects": {
+          "value": "20",
+          "suffix": "+",
+          "label": "Projects",
+          "sublabel": "Diverse units and areas"
+        },
+        "hotelRooms": {
+          "value": "500",
+          "suffix": "+",
+          "label": "Hotel Rooms",
+          "sublabel": "Built according to quality experiences and expertise"
+        },
+        "builtArea": {
+          "value": "110000",
+          "label": "m² Built Area",
+          "sublabel": "Compliant with the latest construction trends"
+        },
+        "infrastructure": {
+          "value": "274000",
+          "label": "m² Infrastructure",
+          "sublabel": "Currently under development"
+        }
+      }
     },
     "Services": {
       "title": "Our Services",

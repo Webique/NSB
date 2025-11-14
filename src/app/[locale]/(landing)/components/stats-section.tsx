@@ -4,51 +4,6 @@ import { motion, useInView } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
-const mainStats = [
-  { value: 15, suffix: "+", label: "عاماً زاخرة بالخبرات" },
-  { value: 20, suffix: "+", label: "مشروعاً تحكي قصصها" }
-];
-
-const detailedStats = [
-  { value: 5, label: "مدن", sublabel: "الرياض – جدة – مكة – الطائف – المدينة" },
-  { value: 15, label: "سنة", sublabel: "خبرات متراكمة في المجالات العقارية" },
-  { value: 77, label: "مبنى", sublabel: "وفق أعلى معايير الإتقان والجودة" },
-  {
-    value: 10,
-    label: "مشاريع",
-    sublabel: "تحت الدراسة تنضم لقائمة المنجزات قريباً"
-  },
-  {
-    value: 50000,
-    label: "م² الأراضي المطورة",
-    sublabel: "مساحات في ازدياد مستمر"
-  },
-  {
-    value: 200,
-    suffix: "+",
-    label: "وحدة سكنية",
-    sublabel: "تنعم بها أكثر من 200 أسرة"
-  },
-  {
-    value: 20,
-    suffix: "+",
-    label: "مشروع",
-    sublabel: "متنوعة الوحدات والمناطق"
-  },
-  {
-    value: 500,
-    suffix: "+",
-    label: "غرفة فندقية",
-    sublabel: "شيّدت وفق تجارب وخبرات نوعية"
-  },
-  {
-    value: 110000,
-    label: "م² مسطحات البناء",
-    sublabel: "تتوافق مع أحدث توجهات البناء"
-  },
-  { value: 274000, label: "م² بنية تحتية", sublabel: "جار العمل على تطويرها" }
-];
-
 function Counter({ value, isInView }: { value: number; isInView: boolean }) {
   const [count, setCount] = useState(0);
 
@@ -80,6 +35,75 @@ export default function StatsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
+  const mainStats = [
+    {
+      value: 15,
+      suffix: "+",
+      label: t("mainStats.years.label")
+    },
+    {
+      value: 20,
+      suffix: "+",
+      label: t("mainStats.projects.label")
+    }
+  ];
+
+  const detailedStats = [
+    {
+      value: 5,
+      label: t("detailedStats.cities.label"),
+      sublabel: t("detailedStats.cities.sublabel")
+    },
+    {
+      value: 15,
+      label: t("detailedStats.experience.label"),
+      sublabel: t("detailedStats.experience.sublabel")
+    },
+    {
+      value: 77,
+      label: t("detailedStats.buildings.label"),
+      sublabel: t("detailedStats.buildings.sublabel")
+    },
+    {
+      value: 10,
+      label: t("detailedStats.upcomingProjects.label"),
+      sublabel: t("detailedStats.upcomingProjects.sublabel")
+    },
+    {
+      value: 50000,
+      label: t("detailedStats.developedLand.label"),
+      sublabel: t("detailedStats.developedLand.sublabel")
+    },
+    {
+      value: 200,
+      suffix: "+",
+      label: t("detailedStats.residentialUnits.label"),
+      sublabel: t("detailedStats.residentialUnits.sublabel")
+    },
+    {
+      value: 20,
+      suffix: "+",
+      label: t("detailedStats.diverseProjects.label"),
+      sublabel: t("detailedStats.diverseProjects.sublabel")
+    },
+    {
+      value: 500,
+      suffix: "+",
+      label: t("detailedStats.hotelRooms.label"),
+      sublabel: t("detailedStats.hotelRooms.sublabel")
+    },
+    {
+      value: 110000,
+      label: t("detailedStats.builtArea.label"),
+      sublabel: t("detailedStats.builtArea.sublabel")
+    },
+    {
+      value: 274000,
+      label: t("detailedStats.infrastructure.label"),
+      sublabel: t("detailedStats.infrastructure.sublabel")
+    }
+  ];
+
   return (
     <section className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-32">
       {/* Decorative Background */}
@@ -91,7 +115,8 @@ export default function StatsSection() {
       <div className="container relative px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
@@ -102,8 +127,8 @@ export default function StatsSection() {
             <div className="to-primary/50 bg-linear-to-l h-px w-16 from-transparent" />
           </div>
 
-          <h2 className="mb-6 text-5xl font-bold text-gray-900 md:text-6xl">
-            أين وصلت نسب؟
+          <h2 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">
+            {t("title")}
           </h2>
           <div className="via-primary bg-linear-to-r mx-auto h-1 w-24 from-transparent to-transparent" />
 
@@ -113,7 +138,8 @@ export default function StatsSection() {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.5 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative"
               >
@@ -122,11 +148,11 @@ export default function StatsSection() {
                   <div className="bg-primary/10 absolute -end-12 -top-12 h-48 w-48 rounded-full transition-all duration-500 group-hover:scale-150" />
 
                   <div className="relative text-center">
-                    <div className="from-primary to-secondary bg-linear-to-br mb-4 bg-clip-text text-8xl font-bold text-transparent md:text-9xl">
+                    <div className="from-primary to-secondary bg-linear-to-br mb-4 bg-clip-text text-6xl font-bold text-transparent md:text-7xl">
                       <Counter value={stat.value} isInView={isInView} />
                       {stat.suffix}
                     </div>
-                    <div className="text-2xl font-semibold text-gray-700">
+                    <div className="text-xl font-semibold text-gray-700">
                       {stat.label}
                     </div>
                   </div>
@@ -138,7 +164,8 @@ export default function StatsSection() {
           {/* Investment Amount - Featured */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="from-primary to-secondary bg-linear-to-br relative mx-auto mb-20 max-w-3xl overflow-hidden rounded-3xl p-12 shadow-2xl"
           >
@@ -148,12 +175,10 @@ export default function StatsSection() {
             </div>
 
             <div className="relative text-center text-white">
-              <div className="mb-4 text-6xl font-bold md:text-7xl">
-                +450,000,000
+              <div className="mb-4 text-5xl font-bold md:text-6xl">
+                {t("investment.amount")}
               </div>
-              <div className="text-2xl font-medium">
-                مجموع الاستثمارات (ريال)
-              </div>
+              <div className="text-xl font-medium">{t("investment.label")}</div>
             </div>
 
             {/* Decorative Corners */}
@@ -168,7 +193,8 @@ export default function StatsSection() {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
@@ -176,7 +202,7 @@ export default function StatsSection() {
               <div className="from-primary/5 bg-linear-to-br absolute inset-0 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
 
               <div className="relative">
-                <div className="from-primary to-secondary bg-linear-to-br mb-3 bg-clip-text text-4xl font-bold text-transparent">
+                <div className="from-primary to-secondary bg-linear-to-br mb-3 bg-clip-text text-3xl font-bold text-transparent">
                   <Counter value={stat.value} isInView={isInView} />
                   {stat.suffix}
                 </div>

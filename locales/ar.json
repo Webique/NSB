@@ -11,20 +11,78 @@
       "ctaSecondary": "تواصل معنا"
     },
     "Stats": {
-      "years": "عاماً",
-      "experience": "زاخرة بالخبرات",
-      "projects": "مشروعاً",
-      "stories": "تحكي قصصها",
-      "investments": "مجموع الاستثمارات",
-      "sar": "ريال",
-      "cities": "مدن",
-      "buildings": "مبنى",
-      "quality": "وفق أعلى معايير الإتقان والجودة",
-      "units": "وحدة سكنية",
-      "families": "أسرة",
-      "rooms": "غرفة فندقية",
-      "area": "مسطحات البناء",
-      "infrastructure": "بنية تحتية"
+      "title": "أين وصلت نسب؟",
+      "mainStats": {
+        "years": {
+          "value": "15",
+          "suffix": "+",
+          "label": "عاماً زاخرة بالخبرات"
+        },
+        "projects": {
+          "value": "20",
+          "suffix": "+",
+          "label": "مشروعاً تحكي قصصها"
+        }
+      },
+      "investment": {
+        "amount": "+450,000,000",
+        "label": "مجموع الاستثمارات (ريال)"
+      },
+      "detailedStats": {
+        "cities": {
+          "value": "5",
+          "label": "مدن",
+          "sublabel": "الرياض – جدة – مكة – الطائف – المدينة"
+        },
+        "experience": {
+          "value": "15",
+          "label": "سنة",
+          "sublabel": "خبرات متراكمة في المجالات العقارية"
+        },
+        "buildings": {
+          "value": "77",
+          "label": "مبنى",
+          "sublabel": "وفق أعلى معايير الإتقان والجودة"
+        },
+        "upcomingProjects": {
+          "value": "10",
+          "label": "مشاريع",
+          "sublabel": "تحت الدراسة تنضم لقائمة المنجزات قريباً"
+        },
+        "developedLand": {
+          "value": "50000",
+          "label": "م² الأراضي المطورة",
+          "sublabel": "مساحات في ازدياد مستمر"
+        },
+        "residentialUnits": {
+          "value": "200",
+          "suffix": "+",
+          "label": "وحدة سكنية",
+          "sublabel": "تنعم بها أكثر من 200 أسرة"
+        },
+        "diverseProjects": {
+          "value": "20",
+          "suffix": "+",
+          "label": "مشروع",
+          "sublabel": "متنوعة الوحدات والمناطق"
+        },
+        "hotelRooms": {
+          "value": "500",
+          "suffix": "+",
+          "label": "غرفة فندقية",
+          "sublabel": "شيّدت وفق تجارب وخبرات نوعية"
+        },
+        "builtArea": {
+          "value": "110000",
+          "label": "م² مسطحات البناء",
+          "sublabel": "تتوافق مع أحدث توجهات البناء"
+        },
+        "infrastructure": {
+          "value": "274000",
+          "label": "م² بنية تحتية",
+          "sublabel": "جار العمل على تطويرها"
+        }
+      }
     },
     "Services": {
       "title": "خدماتنا",

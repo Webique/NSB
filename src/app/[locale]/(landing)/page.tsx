@@ -5,6 +5,7 @@ import { use } from "react";
 
 import AboutSection from "@/app/[locale]/(landing)/components/about-section";
 import HeroSection from "@/app/[locale]/(landing)/components/hero-section";
+import StatsSection from "@/app/[locale]/(landing)/components/stats-section";
 import ValuesSection from "@/app/[locale]/(landing)/components/values-section";
 import WhatsAppFloat from "@/components/whats-app-float";
 
@@ -24,7 +25,7 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
       <SectionDivider variant="primary" />
       <ValuesSection />
       <SectionDivider variant="secondary" />
-      {/* <StatsSection /> */}
+      <StatsSection />
       <SectionDivider variant="primary" />
       {/* <ServicesSection /> */}
       <SectionDivider variant="gradient" />
