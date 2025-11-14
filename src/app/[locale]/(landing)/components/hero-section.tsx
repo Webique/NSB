@@ -18,7 +18,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="max-w-screen relative flex h-screen min-h-[600px] w-full items-center justify-center overflow-hidden bg-black/70 py-6">
+    <section className="max-w-screen relative flex h-screen min-h-[600px] w-full items-center justify-center overflow-hidden bg-black/70 py-5 sm:py-6">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <ExportedImage

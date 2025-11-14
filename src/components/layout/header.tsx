@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 import * as React from "react";
@@ -15,6 +15,16 @@ import { cn } from "@/lib/utils";
 export default function Header() {
   const t = useTranslations("Header");
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -26,10 +36,19 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-200/50 bg-white/90 shadow-sm backdrop-blur-md transition-all duration-300">
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "bg-white/95 shadow-sm backdrop-blur-xl",
+        "md:shadow-none",
+        isScrolled
+          ? "md:bg-white/95 md:shadow-sm md:backdrop-blur-xl"
+          : "md:bg-transparent md:backdrop-blur-sm"
+      )}
+    >
       {/* Main Header */}
-      <div className="layout">
-        <div className="flex h-16 items-center justify-between lg:h-20">
+      <div className="container mx-auto px-4">
+        <div className="flex h-16 items-center justify-between lg:h-24">
           {/* Logo */}
           <m.div
             initial={{ opacity: 0, x: -20 }}
@@ -37,7 +56,14 @@ export default function Header() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="flex h-full items-center gap-3"
           >
-            <Logo />
+            <div
+              className={cn(
+                "transition-all duration-300",
+                isScrolled ? "" : "md:brightness-0 md:invert"
+              )}
+            >
+              <Logo />
+            </div>
           </m.div>
 
           {/* Desktop Navigation */}
@@ -52,8 +78,11 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "text-foreground hover:text-primary relative font-medium transition-colors",
-                    "before:absolute before:bottom-0 before:start-0 before:h-0.5 before:w-0 before:bg-current",
+                    "hover:text-primary relative text-lg font-semibold transition-colors",
+                    isScrolled
+                      ? "text-gray-700"
+                      : "text-gray-700 md:text-white",
+                    "before:bg-primary before:absolute before:-bottom-1 before:start-0 before:h-0.5 before:w-0",
                     "before:transition-all before:duration-300 hover:before:w-full"
                   )}
                 >
@@ -70,11 +99,11 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            <LocaleSwitcher isTop={false} />
+            <LocaleSwitcher isTop={!isScrolled} />
 
             <div className="flex items-center">
               <Button
-                className="bg-primary hidden h-auto items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl has-[>svg]:px-6 lg:flex"
+                className="bg-primary shadow-primary/20 hover:shadow-primary/30 hover:bg-primary/90 hidden h-auto items-center gap-2 rounded-full px-8 py-4 text-base font-bold text-black shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl has-[>svg]:px-8 lg:flex"
                 asChild
               >
                 <Link
@@ -82,7 +111,7 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle className="size-4" />
+                  <MessageCircle className="size-5" />
                   {t("cta")}
                 </Link>
               </Button>
@@ -176,7 +205,7 @@ export default function Header() {
                     href={siteConfig.links.whatsapp}
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <Phone className="size-4" />
+                    <MessageCircle className="size-4" />
                     {t("cta")}
                   </a>
                 </Button>
