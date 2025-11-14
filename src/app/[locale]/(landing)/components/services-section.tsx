@@ -38,7 +38,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="bg-linear-to-b relative overflow-hidden from-white to-gray-50 py-32"
+      className="bg-linear-to-b relative overflow-hidden from-white to-gray-50 py-24"
     >
       {/* Decorative Background */}
       <div className="bg-primary/5 absolute start-0 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" />

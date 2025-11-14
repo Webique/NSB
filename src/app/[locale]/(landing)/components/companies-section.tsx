@@ -18,18 +18,18 @@ const CompaniesSection = () => {
   const dir = getLangDir(locale);
 
   const companies = [
-    { src: "/images/companies/1.png", width: 150, height: 150 },
-    { src: "/images/companies/2.png", width: 150, height: 150 },
-    { src: "/images/companies/3.png", width: 150, height: 150 },
-    { src: "/images/companies/4.png", width: 150, height: 150 },
-    { src: "/images/companies/5.png", width: 213, height: 142 },
-    { src: "/images/companies/6.png", width: 150, height: 150 }
+    { src: "/images/companies/1.png", width: 100, height: 100 },
+    { src: "/images/companies/3.png", width: 100, height: 100 },
+    { src: "/images/companies/2.png", width: 100, height: 100 },
+    { src: "/images/companies/4.png", width: 100, height: 100 },
+    { src: "/images/companies/5.png", width: 50, height: 80 },
+    { src: "/images/companies/6.png", width: 100, height: 100 }
   ];
 
   return (
     <section
       id="companies"
-      className="relative overflow-hidden bg-gray-50 py-32"
+      className="relative overflow-hidden bg-gray-50 py-24"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0">

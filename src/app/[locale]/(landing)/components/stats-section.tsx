@@ -105,7 +105,7 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-32">
+    <section className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-24">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="pattern-grid h-full w-full" />

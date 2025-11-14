@@ -18,25 +18,25 @@ const PartnersSection = () => {
   const dir = getLangDir(locale);
 
   const partners = [
-    { src: "/images/partners/1.png", width: 150, height: 150 },
-    { src: "/images/partners/2.png", width: 150, height: 150 },
-    { src: "/images/partners/3.png", width: 150, height: 150 },
-    { src: "/images/partners/4.png", width: 150, height: 150 },
-    { src: "/images/partners/5.png", width: 213, height: 142 },
-    { src: "/images/partners/6.png", width: 150, height: 150 },
-    { src: "/images/partners/7.png", width: 150, height: 150 },
-    { src: "/images/partners/8.png", width: 150, height: 150 },
-    { src: "/images/partners/9.png", width: 150, height: 150 },
-    { src: "/images/partners/10.png", width: 150, height: 150 },
-    { src: "/images/partners/11.png", width: 150, height: 150 },
-    { src: "/images/partners/12.png", width: 150, height: 150 },
-    { src: "/images/partners/13.png", width: 150, height: 150 },
-    { src: "/images/partners/14.png", width: 150, height: 150 },
-    { src: "/images/partners/15.png", width: 150, height: 150 }
+    { src: "/images/partners/1.png", width: 60, height: 60 },
+    { src: "/images/partners/2.png", width: 100, height: 100 },
+    { src: "/images/partners/3.png", width: 80, height: 80 },
+    { src: "/images/partners/4.png", width: 80, height: 80 },
+    { src: "/images/partners/5.png", width: 100, height: 100 },
+    { src: "/images/partners/6.png", width: 100, height: 100 },
+    { src: "/images/partners/7.png", width: 100, height: 100 },
+    { src: "/images/partners/8.png", width: 100, height: 100 },
+    { src: "/images/partners/9.png", width: 100, height: 100 },
+    { src: "/images/partners/10.png", width: 80, height: 80 },
+    { src: "/images/partners/11.png", width: 100, height: 100 },
+    { src: "/images/partners/12.png", width: 60, height: 60 },
+    { src: "/images/partners/13.png", width: 100, height: 100 },
+    { src: "/images/partners/14.png", width: 150, height: 100 },
+    { src: "/images/partners/15.png", width: 150, height: 100 }
   ];
 
   return (
-    <section id="partners" className="relative overflow-hidden bg-white py-32">
+    <section id="partners" className="relative overflow-hidden bg-white py-24">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="bg-primary/5 absolute end-0 top-0 h-96 w-96 -translate-y-1/2 translate-x-1/2 rounded-full blur-3xl"></div>
@@ -81,7 +81,7 @@ const PartnersSection = () => {
               speed: 1.5
             })
           ]}
-          className="max-w-full overflow-hidden pb-10"
+          className="max-w-full overflow-hidden pb-6"
         >
           <CarouselContent>
             {[...partners, ...partners, ...partners].map((partner, index) => (

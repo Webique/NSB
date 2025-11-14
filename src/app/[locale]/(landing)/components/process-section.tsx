@@ -16,7 +16,7 @@ export default function ProcessSection() {
   const t = useTranslations("IndexPage.Process");
 
   return (
-    <section className="bg-linear-to-b relative overflow-hidden from-white to-gray-50 py-32">
+    <section className="bg-linear-to-b relative overflow-hidden from-white to-gray-50 py-24">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="pattern-dots h-full w-full" />

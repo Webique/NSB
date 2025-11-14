@@ -29,7 +29,7 @@ export default function ValuesSection() {
   ];
 
   return (
-    <section className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-32">
+    <section className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-24">
       {/* Decorative Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="pattern-dots h-full w-full" />

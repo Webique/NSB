@@ -54,7 +54,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 px-4 py-20 md:py-32">
+      <div className="container relative z-10 px-4 py-20 md:py-24">
         <div className="mx-auto max-w-6xl text-center">
           {/* Logo/Brand Mark */}
           <motion.div
