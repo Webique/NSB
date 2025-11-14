@@ -1,32 +1,35 @@
 "use client";
 
+import { Award, Layers, Lightbulb } from "lucide-react";
 import { motion, useInView } from "motion/react";
-import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
-
-const values = [
-  {
-    key: "feature1",
-    title: "الإتقان",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-012.png"
-  },
-  {
-    key: "feature2",
-    title: "الابتكار",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-060.png"
-  },
-  {
-    key: "feature3",
-    title: "الشمولية",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-068.png"
-  }
-];
 
 export default function ValuesSection() {
   const t = useTranslations("IndexPage.Features");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  const values = [
+    {
+      key: "feature1",
+      title: t("feature1.title"),
+      description: t("feature1.description"),
+      icon: Award
+    },
+    {
+      key: "feature2",
+      title: t("feature2.title"),
+      description: t("feature2.description"),
+      icon: Lightbulb
+    },
+    {
+      key: "feature3",
+      title: t("feature3.title"),
+      description: t("feature3.description"),
+      icon: Layers
+    }
+  ];
 
   return (
     <section className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-32">
@@ -69,44 +72,29 @@ export default function ValuesSection() {
                 {/* Decorative Corner */}
                 <div className="bg-primary/10 absolute end-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
 
-                {/* Icon/Image */}
+                {/* Icon */}
                 <div className="relative mb-6 flex justify-center">
-                  <div className="from-primary/10 to-secondary/10 bg-linear-to-br relative h-32 w-32 overflow-hidden rounded-2xl p-4">
-                    <ExportedImage
-                      src={value.image}
-                      alt={value.title}
-                      fill
-                      className="object-contain p-4"
-                    />
+                  <div className="from-primary/10 to-secondary/10 bg-linear-to-br flex size-24 items-center justify-center rounded-2xl shadow-inner transition-all duration-500 group-hover:scale-110">
+                    <value.icon className="text-primary group-hover:text-secondary size-14 transition-colors duration-500" />
                   </div>
                 </div>
 
                 {/* Title */}
                 <div className="relative mb-4 text-center">
-                  <h3 className="text-primary group-hover:text-secondary mb-2 text-4xl font-bold transition-colors">
+                  <h3 className="text-primary group-hover:text-secondary mb-2 text-3xl font-bold transition-colors">
                     {value.title}
                   </h3>
-                  <div className="via-primary bg-linear-to-r mx-auto h-1 w-16 from-transparent to-transparent transition-all group-hover:w-24" />
+                  <div className="via-primary bg-linear-to-r mx-auto h-1 w-16 from-transparent to-transparent transition-all duration-500 group-hover:w-24" />
                 </div>
 
                 {/* Description */}
-                <p className="relative text-center text-lg leading-relaxed text-gray-600">
-                  {t(`${value.key}.description` as any)}
+                <p className="relative text-center text-base leading-relaxed text-gray-600">
+                  {value.description}
                 </p>
 
                 {/* Decorative Bottom Line */}
-                <div className="via-primary/50 bg-linear-to-r absolute inset-x-0 bottom-0 h-1 from-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="via-primary/50 bg-linear-to-r absolute inset-x-0 bottom-0 h-1 from-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               </div>
-
-              {/* Floating Number */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
-                className="bg-primary absolute -end-4 -top-4 flex h-12 w-12 items-center justify-center rounded-full text-2xl font-bold text-white shadow-lg"
-              >
-                {index + 1}
-              </motion.div>
             </motion.div>
           ))}
         </div>

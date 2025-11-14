@@ -72,23 +72,19 @@
       "button": "Get Started Today"
     },
     "Features": {
-      "title": "Why Choose NSB",
-      "subtitle": "Your Trusted Real Estate Partner",
+      "title": "Our Values",
+      "subtitle": "What Sets Us Apart",
       "feature1": {
-        "title": "Expert Team",
-        "description": "Professional real estate consultants with years of experience"
+        "title": "Excellence",
+        "description": "We commit to the highest standards of quality and excellence in all our projects"
       },
       "feature2": {
-        "title": "Premium Properties",
-        "description": "Exclusive access to the finest properties in the region"
+        "title": "Innovation",
+        "description": "We rely on innovative construction thinking and deep understanding of needs"
       },
       "feature3": {
-        "title": "Trusted Service",
-        "description": "Transparent processes and dedicated customer support"
-      },
-      "feature4": {
-        "title": "Market Insights",
-        "description": "Data-driven analysis and market trend expertise"
+        "title": "Comprehensiveness",
+        "description": "We provide an integrated system of real estate services"
       }
     },
     "Portfolio": {

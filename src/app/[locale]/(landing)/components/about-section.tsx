@@ -105,7 +105,7 @@ export default function AboutSection() {
             {/* Main Image */}
             <div className="relative h-[600px] overflow-hidden rounded-2xl shadow-2xl">
               <ExportedImage
-                src="/images/الملف التعريفي-نسب العقارية(1).pdf-image-004.jpg"
+                src="/images/about.jpg"
                 alt="About NSB"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
