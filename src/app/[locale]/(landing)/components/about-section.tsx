@@ -19,7 +19,7 @@ export default function AboutSection() {
           <m.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="relative"
           >
@@ -49,7 +49,7 @@ export default function AboutSection() {
               <m.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-linear-to-br group relative overflow-hidden rounded-2xl border border-gray-100 from-gray-50 to-white p-6 shadow-sm transition-all hover:shadow-md"
               >
@@ -70,7 +70,7 @@ export default function AboutSection() {
               <m.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="bg-linear-to-br group relative overflow-hidden rounded-2xl border border-gray-100 from-gray-50 to-white p-6 shadow-sm transition-all hover:shadow-md"
               >
@@ -94,7 +94,7 @@ export default function AboutSection() {
           <m.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="relative"
           >
@@ -118,7 +118,7 @@ export default function AboutSection() {
             <m.div
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-primary absolute -bottom-8 -start-2 rounded-2xl p-8 shadow-xl sm:-start-8"
             >

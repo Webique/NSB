@@ -26,7 +26,7 @@ export default function ProcessSection() {
         <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
@@ -62,7 +62,7 @@ export default function ProcessSection() {
                   key={step.key}
                   initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.1 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative flex items-center ${
                     isLeft ? "lg:flex-row" : "lg:flex-row-reverse"

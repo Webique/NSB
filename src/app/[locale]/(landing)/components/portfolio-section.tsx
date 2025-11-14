@@ -24,7 +24,7 @@ export default function PortfolioSection() {
         <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
@@ -50,7 +50,7 @@ export default function PortfolioSection() {
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative overflow-hidden rounded-3xl shadow-xl"
             >

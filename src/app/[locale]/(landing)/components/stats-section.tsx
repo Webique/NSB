@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 function Counter({ value }: { value: number }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (!isInView) return;
@@ -117,7 +117,7 @@ export default function StatsSection() {
         <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
@@ -140,7 +140,7 @@ export default function StatsSection() {
                 key={index}
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative"
               >
@@ -166,7 +166,7 @@ export default function StatsSection() {
           <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="from-primary to-secondary bg-linear-to-br relative mx-auto mb-20 max-w-3xl overflow-hidden rounded-3xl p-12 shadow-2xl"
           >
@@ -197,7 +197,7 @@ export default function StatsSection() {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >

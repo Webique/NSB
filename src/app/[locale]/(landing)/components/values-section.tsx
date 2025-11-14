@@ -39,7 +39,7 @@ export default function ValuesSection() {
         <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
@@ -62,7 +62,7 @@ export default function ValuesSection() {
               key={value.key}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="group relative"
             >
@@ -102,7 +102,7 @@ export default function ValuesSection() {
         <m.div
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="from-primary via-secondary to-primary bg-linear-to-r mx-auto mt-16 h-2 w-32 rounded-full"
         />

@@ -19,7 +19,7 @@ export default function CTASection() {
         className="absolute inset-0 z-0"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true }}
       >
         <m.div
           variants={{
@@ -44,7 +44,7 @@ export default function CTASection() {
         <m.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 }
