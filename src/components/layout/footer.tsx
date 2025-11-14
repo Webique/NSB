@@ -4,8 +4,6 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
-import Instagram from "@/assets/icons/instagram.svg";
-import TickTock from "@/assets/icons/tiktok.svg";
 import Logo from "@/components/ui/logo";
 import { siteConfig } from "@/config/site";
 
@@ -24,33 +22,6 @@ const Footer = () => {
     { label: t("marketing"), href: "#services" },
     { label: t("development"), href: "#services" },
     { label: t("consulting"), href: "#services" }
-  ];
-
-  const socialLinks = [
-    {
-      icon: Instagram,
-      href: `${siteConfig.links.instagram}`,
-      label: "Instagram",
-      target: "_blank"
-    },
-    {
-      icon: TickTock,
-      href: `${siteConfig.links.tiktok}`,
-      label: "TikTok",
-      target: "_blank"
-    },
-    {
-      icon: Mail,
-      href: `mailto:${siteConfig.support.email}`,
-      label: "Email",
-      target: "_blank"
-    },
-    {
-      icon: Phone,
-      href: `tel:${siteConfig.support.phone}`,
-      label: "WhatsApp",
-      target: "_blank"
-    }
   ];
 
   return (
@@ -73,42 +44,13 @@ const Footer = () => {
             className="lg:col-span-5"
           >
             <Logo
-              src="/images/logos/2.jpeg"
+              src="/images/logo-white.png"
               imgClassName="w-36 lg:w-44"
               className="mb-6"
-              width={333}
-              height={197}
             />
             <p className="mb-8 max-w-md text-base leading-relaxed text-gray-300">
               {t("companyDescription")}
             </p>
-
-            {/* Social Links */}
-            <div className="space-y-4">
-              <h4 className="text-sm font-bold uppercase tracking-wider text-white">
-                {t("connectWithUs")}
-              </h4>
-              <div className="flex gap-3">
-                {socialLinks.map((social) => {
-                  const Icon = social.icon;
-                  return (
-                    <m.a
-                      key={social.label}
-                      href={social.href}
-                      target={social.target}
-                      rel="noopener noreferrer"
-                      className="group relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-white/10 transition-all hover:bg-white/20"
-                      aria-label={social.label}
-                      whileHover={{ y: -3 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Icon className="relative z-10 h-5 w-5 text-gray-300 transition-colors group-hover:text-white" />
-                      <div className="from-primary to-accent bg-linear-to-br absolute inset-0 opacity-0 transition-opacity group-hover:opacity-20" />
-                    </m.a>
-                  );
-                })}
-              </div>
-            </div>
           </m.div>
 
           {/* Quick Links */}

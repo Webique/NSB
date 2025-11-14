@@ -59,7 +59,7 @@
   --primary-foreground: #0A0A0A;
 
   /* Secondary - Black for contrast */
-  --secondary: #000000;
+  --secondary: #313E48;
   --secondary-foreground: #FFFFFF;
 
   /* Muted elements */
@@ -109,8 +109,8 @@
   --primary: #D4AF37;
   --primary-foreground: #FFFFFF;
 
-  --secondary: #F5F5F5;
-  --secondary-foreground: #0A0A0A;
+  --secondary: #313E48;
+  --secondary-foreground: #FFFFFF;
 
   --muted: #F0F0F0;
   --muted-foreground: #6B6B6B;

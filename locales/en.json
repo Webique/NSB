@@ -4,146 +4,120 @@
       "tooltip": "Contact us via WhatsApp"
     },
     "Hero": {
-      "title": "Abdullah Omar",
-      "subtitle": "Photographer & Creative Producer",
-      "cta": "Book Your Session",
-      "whatsappButton": "Book via WhatsApp",
-      "badge1": "Professional Photography",
-      "badge2": "High Quality",
-      "badge3": "Creative Excellence"
+      "title": "NSB Real Estate",
+      "subtitle": "Leading Comprehensive Business in Construction and Development",
+      "description": "Providing an integrated system of construction, infrastructure, and development works through accumulated expertise and innovative construction thinking.",
+      "cta": "Start Your Journey",
+      "ctaSecondary": "Contact Us"
     },
-    "About": {
-      "title": "About Me",
-      "description": "I'm Abdullah Omar - a photographer and creative producer passionate about capturing visuals that tell stories and reflect true identity.",
-      "quote": "Every shot I take is crafted with precision, emotion, and a clear artistic vision."
+    "Stats": {
+      "years": "Years",
+      "experience": "Rich Experience",
+      "projects": "Projects",
+      "stories": "Tell Their Stories",
+      "investments": "Total Investments",
+      "sar": "SAR",
+      "cities": "Cities",
+      "buildings": "Buildings",
+      "quality": "Highest Standards of Excellence and Quality",
+      "units": "Residential Units",
+      "families": "Families",
+      "rooms": "Hotel Rooms",
+      "area": "Built Area",
+      "infrastructure": "Infrastructure"
     },
     "Services": {
-      "title": "My Services",
-      "subtitle": "Comprehensive professional photography services",
-      "badge": "What I Offer",
-      "items": {
-        "reels": {
-          "title": "Commercial Reels",
-          "description": "Professional videos for social media"
-        },
-        "products": {
-          "title": "Product Photography",
-          "description": "Decorative or white background"
-        },
-        "events": {
-          "title": "Event Coverage",
-          "description": "Conferences, exhibitions, weddings"
-        },
-        "portrait": {
-          "title": "Personal Portrait",
-          "description": "Portrait & lifestyle photography"
-        }
+      "title": "Our Services",
+      "subtitle": "Comprehensive Real Estate Solutions",
+      "buying": {
+        "title": "Property Buying",
+        "description": "Find your dream property with our extensive portfolio and expert guidance."
+      },
+      "selling": {
+        "title": "Property Selling",
+        "description": "Maximize your property value with our strategic marketing and sales expertise."
+      },
+      "consulting": {
+        "title": "Real Estate Consulting",
+        "description": "Get professional advice on investments, market trends, and property management."
+      },
+      "management": {
+        "title": "Property Management",
+        "description": "Comprehensive property management services to maintain and enhance your assets."
+      }
+    },
+    "About": {
+      "title": "About NSB",
+      "subtitle": "Excellence in Real Estate",
+      "description": "NSB Real Estate is a leading property solutions provider committed to delivering exceptional service and results. With years of experience and a dedicated team of professionals, we help clients navigate the real estate market with confidence.",
+      "mission": "Our Mission",
+      "missionText": "To provide innovative real estate solutions that exceed client expectations and create lasting value.",
+      "vision": "Our Vision",
+      "visionText": "To be the most trusted and preferred real estate partner in the region."
+    },
+    "Contact": {
+      "title": "Get In Touch",
+      "subtitle": "We're Here to Help",
+      "description": "Have questions? Our team is ready to assist you with all your real estate needs.",
+      "phone": "Phone",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Location",
+      "visitUs": "Visit Us"
+    },
+    "CTA": {
+      "title": "Ready to Find Your Perfect Property?",
+      "description": "Let us help you discover the ideal real estate solution for your needs.",
+      "button": "Get Started Today"
+    },
+    "Features": {
+      "title": "Why Choose NSB",
+      "subtitle": "Your Trusted Real Estate Partner",
+      "feature1": {
+        "title": "Expert Team",
+        "description": "Professional real estate consultants with years of experience"
+      },
+      "feature2": {
+        "title": "Premium Properties",
+        "description": "Exclusive access to the finest properties in the region"
+      },
+      "feature3": {
+        "title": "Trusted Service",
+        "description": "Transparent processes and dedicated customer support"
+      },
+      "feature4": {
+        "title": "Market Insights",
+        "description": "Data-driven analysis and market trend expertise"
       }
     },
     "Portfolio": {
-      "title": "Portfolio",
-      "subtitle": "Samples of my professional work",
-      "badge": "My Work",
-      "categories": {
-        "all": "All",
-        "products": "Products",
-        "events": "Events",
-        "portraits": "Portraits",
-        "commercial": "Commercial"
-      }
-    },
-    "Contact": {
-      "title": "Contact Me",
-      "subtitle": "Ready to turn your ideas into stunning visuals",
-      "badge": "Get In Touch",
-      "phone": "Phone",
-      "email": "Email",
-      "instagram":"Instagram",
-      "whatsapp": "WhatsApp",
-      "cta": "I respond to all inquiries within",
-      "response": "24 hours"
+      "title": "Featured Properties",
+      "subtitle": "Discover Our Premium Collection",
+      "viewAll": "View All Properties"
     },
     "Process": {
-      "title": "How I Work",
-      "subtitle": "Professional process from start to finish",
-      "badge": "My Process",
-      "steps": {
-        "consultation": {
-          "title": "Consultation",
-          "description": "We listen to your ideas and understand your vision"
-        },
-        "planning": {
-          "title": "Planning",
-          "description": "We create a comprehensive shooting plan"
-        },
-        "shooting": {
-          "title": "Shooting",
-          "description": "We capture moments with highest quality"
-        },
-        "delivery": {
-          "title": "Delivery",
-          "description": "We deliver polished and refined work"
-        }
+      "title": "How We Work",
+      "subtitle": "Simple Steps to Your Dream Property",
+      "step1": {
+        "title": "Consultation",
+        "description": "Share your requirements and preferences with our experts"
+      },
+      "step2": {
+        "title": "Property Search",
+        "description": "We find the perfect properties matching your criteria"
+      },
+      "step3": {
+        "title": "Site Visits",
+        "description": "Tour selected properties with our professional team"
+      },
+      "step4": {
+        "title": "Closing Deal",
+        "description": "Complete paperwork and move into your new property"
       }
     },
     "Testimonials": {
-      "title": "Client Reviews",
-      "subtitle": "What my clients say about their experience with me",
-      "badge": "Testimonials",
-      "items": {
-        "testimonial1": {
-          "content": "Amazing experience with Abdullah, the photography was very professional and the results exceeded expectations. I recommend everyone to work with him.",
-          "name": "Mohammed Al-Otaibi",
-          "role": "Business Owner"
-        },
-        "testimonial2": {
-          "content": "Professional and creative photographer, understands the vision quickly and executes it perfectly. Photo quality and production are excellent.",
-          "name": "Sarah Ahmed",
-          "role": "Marketing Manager"
-        },
-        "testimonial3": {
-          "content": "Our wedding photos were more than amazing, captured all the special moments in a beautiful artistic way. Thank you Abdullah!",
-          "name": "Khaled & Fatima",
-          "role": "Newlyweds"
-        }
-      }
-    },
-    "Stats": {
-      "badge": "By The Numbers",
-      "items": {
-        "projects": "Completed Projects",
-        "clients": "Happy Clients",
-        "awards": "Awards & Recognition",
-        "satisfaction": "Client Satisfaction"
-      }
-    },
-    "CTA": {
-      "title": "Ready to Start Your Project?",
-      "subtitle": "Let's turn your ideas into visual content that makes an impact",
-      "badge": "Let's Work Together",
-      "primaryButton": "Book Your Session Now",
-      "secondaryButton": "View My Work"
-    },
-    "FeaturedWork": {
-      "title": "Featured Work",
-      "subtitle": "A curated selection of my best work",
-      "badge": "Portfolio Highlights",
-      "categories": {
-        "wedding": "Wedding Photography",
-        "product": "Product Photography",
-        "event": "Event Coverage"
-      },
-      "items": {
-        "wedding": {
-          "title": "Wedding Photography"
-        },
-        "product": {
-          "title": "Product Lifestyle"
-        },
-        "event": {
-          "title": "Corporate Event"
-        }
-      }
+      "title": "What Our Clients Say",
+      "subtitle": "Real Stories from Real People"
     }
   },
   "Error": {
@@ -159,20 +133,20 @@
     "backToHome": "Back to home"
   },
   "LocaleLayout": {
-    "name": "Abdullah Omar | Photographer & Creative Producer",
-    "short_name": "Abdullah Omar",
-    "description": "Abdullah Omar - Professional photographer and creative producer. We offer commercial reels, product photography, event coverage, and portrait photography services.",
+    "name": "NSB Real Estate | Premium Property Solutions",
+    "short_name": "NSB Real Estate",
+    "description": "NSB Real Estate - Your trusted partner for premium property solutions. We offer property buying, selling, consulting, and management services in Saudi Arabia.",
     "keywords": [
-      "Abdullah Omar",
-      "Photographer",
-      "Professional Photography",
-      "Product Photography",
-      "Commercial Photography",
-      "Event Photography",
-      "Portrait Photography",
-      "Reels",
-      "Visual Content",
-      "Saudi Photographer"
+      "NSB Real Estate",
+      "Real Estate",
+      "Property",
+      "Property Buying",
+      "Property Selling",
+      "Real Estate Consulting",
+      "Property Management",
+      "Saudi Real Estate",
+      "Premium Properties",
+      "Real Estate Solutions"
     ]
   },
   "LocaleSwitcher": {
@@ -184,20 +158,20 @@
       "home": "Home",
       "about": "About",
       "services": "Services",
-      "myservices": "My Services",
+      "myservices": "Our Services",
       "portfolio": "Portfolio",
       "contact": "Contact",
-      "contactme": "Contact Me"
+      "contactme": "Contact Us"
     },
-    "cta": "Book Now",
-    "siteName": "Abdullah Omar",
-    "siteDescription": "Photographer & Creative Producer"
+    "cta": "Get Started",
+    "siteName": "NSB Real Estate",
+    "siteDescription": "Premium Property Solutions"
   },
   "Footer": {
     "home": "Home",
     "about": "About",
-    "myservices": "My Services",
-    "contactme": "Contact Me",
+    "myservices": "Our Services",
+    "contactme": "Contact Us",
     "quickLinks": "Quick Links",
     "services": "Services",
     "portfolio": "Portfolio",
@@ -206,11 +180,11 @@
     "phone": "Phone",
     "email": "Email",
     "location": "Location",
-    "copyright": "© {year} Abdullah Omar. All rights reserved",
-    "companyDescription": "Professional photographer and creative producer passionate about capturing visuals that tell stories and reflect true identity.",
-    "marketing": "Commercial Photography",
-    "development": "Product Photography",
-    "consulting": "Event Coverage",
+    "copyright": "© {year} NSB Real Estate. All rights reserved",
+    "companyDescription": "NSB Real Estate is your trusted partner for premium property solutions. We provide comprehensive real estate services including buying, selling, consulting, and property management.",
+    "marketing": "Property Buying",
+    "development": "Property Selling",
+    "consulting": "Real Estate Consulting",
     "saudiArabia": "Kingdom of Saudi Arabia",
     "available24_7": "Available 24/7",
     "socialMedia": {
