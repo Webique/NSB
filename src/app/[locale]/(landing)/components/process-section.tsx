@@ -1,8 +1,7 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
-import { useRef } from "react";
 
 const steps = [
   { key: "step1", number: "01" },
@@ -15,8 +14,6 @@ const steps = [
 
 export default function ProcessSection() {
   const t = useTranslations("IndexPage.Process");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
     <section className="bg-linear-to-b relative overflow-hidden from-white to-gray-50 py-32">
@@ -28,7 +25,8 @@ export default function ProcessSection() {
       <div className="container relative px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
@@ -51,7 +49,7 @@ export default function ProcessSection() {
           </p>
         </motion.div>
 
-        <div ref={ref} className="relative">
+        <div className="relative">
           {/* Center Line */}
           <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gray-200 lg:block" />
 
@@ -63,7 +61,8 @@ export default function ProcessSection() {
                 <motion.div
                   key={step.key}
                   initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative flex items-center ${
                     isLeft ? "lg:flex-row" : "lg:flex-row-reverse"

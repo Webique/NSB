@@ -114,7 +114,7 @@ export default function HeroSection() {
             >
               <Link href="#contact">
                 {t("cta")}
-                <ArrowRight className="ms-3 h-5 w-5 transition-transform group-hover:translate-x-2 rtl:rotate-180 rtl:group-hover:-translate-x-2" />
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-2 rtl:rotate-180 rtl:group-hover:-translate-x-2" />
               </Link>
             </Button>
             <Button

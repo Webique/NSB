@@ -1,14 +1,11 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
-import { useRef } from "react";
 
 export default function AboutSection() {
   const t = useTranslations("IndexPage.About");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <section id="about" className="relative overflow-hidden bg-white py-32">
@@ -20,9 +17,9 @@ export default function AboutSection() {
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Text Content */}
           <motion.div
-            ref={ref}
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
             className="relative"
           >
@@ -51,7 +48,8 @@ export default function AboutSection() {
             <div className="space-y-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-linear-to-br group relative overflow-hidden rounded-2xl border border-gray-100 from-gray-50 to-white p-6 shadow-sm transition-all hover:shadow-md"
               >
@@ -71,7 +69,8 @@ export default function AboutSection() {
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="bg-linear-to-br group relative overflow-hidden rounded-2xl border border-gray-100 from-gray-50 to-white p-6 shadow-sm transition-all hover:shadow-md"
               >
@@ -94,7 +93,8 @@ export default function AboutSection() {
           {/* Image with Decorative Frame */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
             className="relative"
           >
@@ -117,7 +117,8 @@ export default function AboutSection() {
             {/* Floating Accent */}
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-primary absolute -bottom-8 -start-2 rounded-2xl p-8 shadow-xl sm:-start-8"
             >

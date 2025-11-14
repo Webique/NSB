@@ -88,20 +88,24 @@
       "title": "Our Services",
       "subtitle": "Comprehensive Real Estate Solutions",
       "buying": {
-        "title": "Property Buying",
-        "description": "Find your dream property with our extensive portfolio and expert guidance."
+        "title": "Real Estate Development",
+        "description": "We aimed to build multiple types of real estate projects to be a bridge connecting to our clients, adorned with luxury in a modern language."
       },
       "selling": {
-        "title": "Property Selling",
-        "description": "Maximize your property value with our strategic marketing and sales expertise."
+        "title": "Real Estate Marketing",
+        "description": "We invest our extensive and quality relationships in this path to achieve its objectives through an exceptional model."
       },
       "consulting": {
-        "title": "Real Estate Consulting",
-        "description": "Get professional advice on investments, market trends, and property management."
+        "title": "Property & Facility Management",
+        "description": "We provide innovative and final solutions to path challenges through an exceptional model that keeps our partners' aspirations in sight."
       },
       "management": {
-        "title": "Property Management",
-        "description": "Comprehensive property management services to maintain and enhance your assets."
+        "title": "Infrastructure & Contracting",
+        "description": "We found solutions and formed the equation to add another dimension for our partners in developing land infrastructure and superstructures."
+      },
+      "investment": {
+        "title": "Land Investment",
+        "description": "We employed our capabilities and our team's diverse expertise to grow returns in the land investment path."
       }
     },
     "About": {
@@ -125,9 +129,12 @@
       "visitUs": "Visit Us"
     },
     "CTA": {
-      "title": "Ready to Find Your Perfect Property?",
-      "description": "Let us help you discover the ideal real estate solution for your needs.",
-      "button": "Get Started Today"
+      "title": "Start Your Journey With Us",
+      "description": "And discover the best investment opportunities",
+      "button": "Get Started Today",
+      "phone": "Phone",
+      "email": "Email",
+      "website": "Website"
     },
     "Features": {
       "title": "Our Values",

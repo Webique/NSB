@@ -3,11 +3,9 @@
 import { Award, Layers, Lightbulb } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
-import { useRef } from "react";
 
 export default function ValuesSection() {
   const t = useTranslations("IndexPage.Features");
-  const ref = useRef(null);
 
   const values = [
     {
@@ -58,7 +56,7 @@ export default function ValuesSection() {
           <div className="via-primary bg-linear-to-r mx-auto h-1 w-24 from-transparent to-transparent" />
         </motion.div>
 
-        <div ref={ref} className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
           {values.map((value, index) => (
             <motion.div
               key={value.key}

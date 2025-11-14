@@ -1,9 +1,8 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
-import { useRef } from "react";
 
 const projects = [
   {
@@ -40,8 +39,6 @@ const projects = [
 
 export default function PortfolioSection() {
   const t = useTranslations("IndexPage.Portfolio");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
     <section className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-32">
@@ -52,7 +49,8 @@ export default function PortfolioSection() {
       <div className="container relative px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
@@ -72,12 +70,13 @@ export default function PortfolioSection() {
           </p>
         </motion.div>
 
-        <div ref={ref} className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative overflow-hidden rounded-3xl shadow-xl"
             >

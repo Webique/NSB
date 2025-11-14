@@ -1,37 +1,39 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
-import { useRef } from "react";
-
-const services = [
-  {
-    key: "buying",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-089.png"
-  },
-  {
-    key: "selling",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-091.png"
-  },
-  {
-    key: "consulting",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-093.png"
-  },
-  {
-    key: "management",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-095.png"
-  },
-  {
-    key: "investment",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-006.jpg"
-  }
-];
 
 export default function ServicesSection() {
   const t = useTranslations("IndexPage.Services");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  const services = [
+    {
+      title: t("buying.title"),
+      description: t("buying.description"),
+      image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-089.png"
+    },
+    {
+      title: t("selling.title"),
+      description: t("selling.description"),
+      image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-091.png"
+    },
+    {
+      title: t("consulting.title"),
+      description: t("consulting.description"),
+      image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-093.png"
+    },
+    {
+      title: t("management.title"),
+      description: t("management.description"),
+      image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-095.png"
+    },
+    {
+      title: t("investment.title"),
+      description: t("investment.description"),
+      image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-006.jpg"
+    }
+  ];
 
   return (
     <section
@@ -45,7 +47,8 @@ export default function ServicesSection() {
       <div className="container relative px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
@@ -65,12 +68,13 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        <div ref={ref} className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
-              key={service.key}
+              key={service.title}
               initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`group relative overflow-hidden rounded-3xl ${
                 index === 4 ? "md:col-span-2 lg:col-span-1" : ""
@@ -79,7 +83,7 @@ export default function ServicesSection() {
               <div className="relative h-[500px]">
                 <ExportedImage
                   src={service.image}
-                  alt={t(`${service.key}.title` as any)}
+                  alt={service.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -101,32 +105,14 @@ export default function ServicesSection() {
                   <div className="mb-4">
                     <div className="bg-primary mb-3 h-1 w-16 transition-all duration-500 group-hover:w-24" />
                     <h3 className="mb-3 text-3xl font-bold transition-colors">
-                      {t(`${service.key}.title` as any)}
+                      {service.title}
                     </h3>
                   </div>
 
                   {/* Description */}
                   <p className="text-base leading-relaxed text-gray-200 transition-all duration-500 group-hover:text-white">
-                    {t(`${service.key}.description` as any)}
+                    {service.description}
                   </p>
-
-                  {/* Hover Arrow */}
-                  <div className="text-primary mt-4 flex items-center gap-2 opacity-0 transition-all duration-500 group-hover:opacity-100">
-                    <span className="text-sm font-semibold">اكتشف المزيد</span>
-                    <svg
-                      className="h-5 w-5 transition-transform group-hover:translate-x-2"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 19l-7-7 7-7"
-                      />
-                    </svg>
-                  </div>
                 </div>
 
                 {/* Bottom Accent Line */}
