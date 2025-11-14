@@ -41,13 +41,13 @@ export default function ContactSection() {
               href={`tel:${siteConfig.support.phone}`}
               className="group block"
             >
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-all group-hover:bg-primary group-hover:scale-110">
-                <Phone className="h-8 w-8 text-primary transition-colors group-hover:text-white" />
+              <div className="bg-primary/10 group-hover:bg-primary mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full transition-all group-hover:scale-110">
+                <Phone className="text-primary h-8 w-8 transition-colors group-hover:text-white" />
               </div>
               <h3 className="mb-2 text-lg font-bold text-gray-900">
                 {t("phone")}
               </h3>
-              <p className="text-gray-600 transition-colors group-hover:text-primary">
+              <p className="group-hover:text-primary text-gray-600 transition-colors">
                 {siteConfig.support.phone}
               </p>
             </Link>
@@ -63,13 +63,13 @@ export default function ContactSection() {
               href={`mailto:${siteConfig.support.email}`}
               className="group block"
             >
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-all group-hover:bg-primary group-hover:scale-110">
-                <Mail className="h-8 w-8 text-primary transition-colors group-hover:text-white" />
+              <div className="bg-primary/10 group-hover:bg-primary mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full transition-all group-hover:scale-110">
+                <Mail className="text-primary h-8 w-8 transition-colors group-hover:text-white" />
               </div>
               <h3 className="mb-2 text-lg font-bold text-gray-900">
                 {t("email")}
               </h3>
-              <p className="text-gray-600 transition-colors group-hover:text-primary">
+              <p className="group-hover:text-primary text-gray-600 transition-colors">
                 {siteConfig.support.email}
               </p>
             </Link>
@@ -86,13 +86,13 @@ export default function ContactSection() {
               target="_blank"
               className="group block"
             >
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-all group-hover:bg-primary group-hover:scale-110">
-                <MapPin className="h-8 w-8 text-primary transition-colors group-hover:text-white" />
+              <div className="bg-primary/10 group-hover:bg-primary mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full transition-all group-hover:scale-110">
+                <MapPin className="text-primary h-8 w-8 transition-colors group-hover:text-white" />
               </div>
               <h3 className="mb-2 text-lg font-bold text-gray-900">
                 {t("location")}
               </h3>
-              <p className="text-gray-600 transition-colors group-hover:text-primary">
+              <p className="group-hover:text-primary text-gray-600 transition-colors">
                 {t("visitUs")}
               </p>
             </Link>

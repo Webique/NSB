@@ -118,6 +118,28 @@
     "Testimonials": {
       "title": "What Our Clients Say",
       "subtitle": "Real Stories from Real People"
+    },
+    "Partners": {
+      "title": "Success Partners",
+      "description": "We are proud of our strategic partnerships with leading companies and institutions in the Kingdom",
+      "trustIndicators": {
+        "iso9001": {
+          "title": "ISO 9001",
+          "subtitle": "Internationally Certified"
+        },
+        "experience": {
+          "title": "+15 Years",
+          "subtitle": "Of Experience & Achievements"
+        },
+        "vision2030": {
+          "title": "Vision 2030",
+          "subtitle": "Partners in Transformation"
+        }
+      }
+    },
+    "Companies": {
+      "title": "Our Companies",
+      "description": "An integrated group of specialized companies under NSB Real Estate"
     }
   },
   "Error": {

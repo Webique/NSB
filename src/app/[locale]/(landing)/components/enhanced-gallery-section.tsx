@@ -6,18 +6,54 @@ import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 
 const galleryImages = [
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-069.jpg", span: "col-span-2 row-span-2" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-070.jpg", span: "col-span-1 row-span-1" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-071.jpg", span: "col-span-1 row-span-1" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-072.jpg", span: "col-span-1 row-span-2" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-074.jpg", span: "col-span-1 row-span-1" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-075.jpg", span: "col-span-2 row-span-1" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-076.jpg", span: "col-span-1 row-span-1" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-077.jpg", span: "col-span-1 row-span-2" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-078.jpg", span: "col-span-1 row-span-1" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-079.jpg", span: "col-span-1 row-span-1" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-080.jpg", span: "col-span-2 row-span-1" },
-  { src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-081.jpg", span: "col-span-1 row-span-1" }
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-069.jpg",
+    span: "col-span-2 row-span-2"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-070.jpg",
+    span: "col-span-1 row-span-1"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-071.jpg",
+    span: "col-span-1 row-span-1"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-072.jpg",
+    span: "col-span-1 row-span-2"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-074.jpg",
+    span: "col-span-1 row-span-1"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-075.jpg",
+    span: "col-span-2 row-span-1"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-076.jpg",
+    span: "col-span-1 row-span-1"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-077.jpg",
+    span: "col-span-1 row-span-2"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-078.jpg",
+    span: "col-span-1 row-span-1"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-079.jpg",
+    span: "col-span-1 row-span-1"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-080.jpg",
+    span: "col-span-2 row-span-1"
+  },
+  {
+    src: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-081.jpg",
+    span: "col-span-1 row-span-1"
+  }
 ];
 
 export default function EnhancedGallerySection() {
@@ -36,7 +72,7 @@ export default function EnhancedGallerySection() {
           className="mb-16 text-center"
         >
           <h2 className="mb-4 text-4xl font-bold md:text-5xl">Our Gallery</h2>
-          <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
+          <p className="text-muted-foreground mx-auto max-w-2xl text-xl">
             Explore our stunning collection of properties
           </p>
         </motion.div>
@@ -62,7 +98,7 @@ export default function EnhancedGallerySection() {
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div
-                className={`absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300 ${
+                className={`bg-linear-to-t absolute inset-0 from-black/60 to-transparent transition-opacity duration-300 ${
                   hoveredIndex === index ? "opacity-100" : "opacity-0"
                 }`}
               />

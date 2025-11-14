@@ -18,7 +18,7 @@ export default function TrustSection() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section className="border-y bg-muted/20 py-16">
+    <section className="bg-muted/20 border-y py-16">
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,28 +26,28 @@ export default function TrustSection() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <h3 className="text-2xl font-bold text-muted-foreground md:text-3xl">
+          <h3 className="text-muted-foreground text-2xl font-bold md:text-3xl">
             Trusted by Leading Organizations
           </h3>
         </motion.div>
 
         <div ref={ref} className="relative overflow-hidden">
           {/* Gradient Overlays */}
-          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-background to-transparent" />
-          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-background to-transparent" />
+          <div className="from-background bg-linear-to-r pointer-events-none absolute left-0 top-0 z-10 h-full w-32 to-transparent" />
+          <div className="from-background bg-linear-to-l pointer-events-none absolute right-0 top-0 z-10 h-full w-32 to-transparent" />
 
           {/* Scrolling Logos */}
           <motion.div
             animate={{
-              x: [0, -1920],
+              x: [0, -1920]
             }}
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
                 duration: 30,
-                ease: "linear",
-              },
+                ease: "linear"
+              }
             }}
             className="flex gap-12"
           >

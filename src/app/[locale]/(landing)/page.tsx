@@ -6,9 +6,11 @@ import { use } from "react";
 import WhatsAppFloat from "@/components/whats-app-float";
 
 import AboutSection from "./components/about-section";
+import CompaniesSection from "./components/companies-section";
 import ContactSection from "./components/contact-section";
 import CTASection from "./components/cta-section";
 import HeroSection from "./components/hero-section";
+import PartnersSection from "./components/partners-section";
 import PortfolioSection from "./components/portfolio-section";
 import ProcessSection from "./components/process-section";
 import ServicesSection from "./components/services-section";
@@ -30,6 +32,8 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
       <ServicesSection />
       <ProcessSection />
       <PortfolioSection />
+      <PartnersSection />
+      <CompaniesSection />
       <CTASection />
       <ContactSection />
       <WhatsAppFloat />
