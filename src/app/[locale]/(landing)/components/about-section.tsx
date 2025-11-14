@@ -119,7 +119,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, scale: 0 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-primary absolute -bottom-8 -start-8 rounded-2xl p-8 shadow-xl"
+              className="bg-primary absolute -bottom-8 -start-2 rounded-2xl p-8 shadow-xl sm:-start-8"
             >
               <div className="text-center">
                 <div className="text-4xl font-bold text-white">15+</div>

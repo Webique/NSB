@@ -1,14 +1,13 @@
 "use client";
 
 import { Award, Layers, Lightbulb } from "lucide-react";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
 export default function ValuesSection() {
   const t = useTranslations("IndexPage.Features");
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const values = [
     {
@@ -41,7 +40,8 @@ export default function ValuesSection() {
       <div className="container relative px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
@@ -63,7 +63,8 @@ export default function ValuesSection() {
             <motion.div
               key={value.key}
               initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="group relative"
             >
@@ -102,7 +103,8 @@ export default function ValuesSection() {
         {/* Bottom Decorative Element */}
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="from-primary via-secondary to-primary bg-linear-to-r mx-auto mt-16 h-2 w-32 rounded-full"
         />

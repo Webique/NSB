@@ -4,8 +4,10 @@ import { motion, useInView } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
-function Counter({ value, isInView }: { value: number; isInView: boolean }) {
+function Counter({ value }: { value: number }) {
   const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   useEffect(() => {
     if (!isInView) return;
@@ -27,13 +29,11 @@ function Counter({ value, isInView }: { value: number; isInView: boolean }) {
     return () => clearInterval(timer);
   }, [value, isInView]);
 
-  return <>{count.toLocaleString()}</>;
+  return <span ref={ref}>{count.toLocaleString()}</span>;
 }
 
 export default function StatsSection() {
   const t = useTranslations("IndexPage.Stats");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const mainStats = [
     {
@@ -148,11 +148,11 @@ export default function StatsSection() {
                   <div className="bg-primary/10 absolute -end-12 -top-12 h-48 w-48 rounded-full transition-all duration-500 group-hover:scale-150" />
 
                   <div className="relative text-center">
-                    <div className="from-primary to-secondary bg-linear-to-br mb-4 bg-clip-text text-6xl font-bold text-transparent md:text-7xl">
-                      <Counter value={stat.value} isInView={isInView} />
+                    <div className="from-primary to-secondary bg-linear-to-br mb-4 bg-clip-text text-5xl font-bold text-transparent md:text-7xl">
+                      <Counter value={stat.value} />
                       {stat.suffix}
                     </div>
-                    <div className="text-xl font-semibold text-gray-700">
+                    <div className="text-lg font-semibold text-gray-700 md:text-xl">
                       {stat.label}
                     </div>
                   </div>
@@ -175,10 +175,12 @@ export default function StatsSection() {
             </div>
 
             <div className="relative text-center text-white">
-              <div className="mb-4 text-5xl font-bold md:text-6xl">
+              <div className="mb-4 text-4xl font-bold md:text-6xl">
                 {t("investment.amount")}
               </div>
-              <div className="text-xl font-medium">{t("investment.label")}</div>
+              <div className="text-lg font-medium md:text-xl">
+                {t("investment.label")}
+              </div>
             </div>
 
             {/* Decorative Corners */}
@@ -188,7 +190,7 @@ export default function StatsSection() {
         </motion.div>
 
         {/* Detailed Stats Grid */}
-        <div ref={ref} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {detailedStats.map((stat, index) => (
             <motion.div
               key={index}
@@ -203,7 +205,7 @@ export default function StatsSection() {
 
               <div className="relative">
                 <div className="from-primary to-secondary bg-linear-to-br mb-3 bg-clip-text text-3xl font-bold text-transparent">
-                  <Counter value={stat.value} isInView={isInView} />
+                  <Counter value={stat.value} />
                   {stat.suffix}
                 </div>
                 <div className="mb-2 text-sm font-bold text-gray-900">
