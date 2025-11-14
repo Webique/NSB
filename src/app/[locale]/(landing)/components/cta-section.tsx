@@ -13,7 +13,10 @@ export default function CTASection() {
   const tFooter = useTranslations("Footer");
 
   return (
-    <section className="bg-linear-to-b relative overflow-hidden from-gray-50 via-white to-gray-50 py-40">
+    <section
+      id="cta"
+      className="bg-linear-to-b relative overflow-hidden from-gray-50 via-white to-gray-50 py-40"
+    >
       {/* Decorative Elements */}
       <m.div
         className="absolute inset-0 z-0"

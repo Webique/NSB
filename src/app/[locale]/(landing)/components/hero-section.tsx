@@ -112,7 +112,7 @@ export default function HeroSection() {
               className="bg-primary shadow-primary/40 hover:shadow-primary/50 hover:bg-primary texxtbase hover:sale-105 d:px-12 group px-8 py-6 font-bold text-black shadow-2xl transition-all md:py-7 md:text-lg"
               asChild
             >
-              <Link href="#contact">
+              <Link href="#cta">
                 {t("cta")}
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-2 rtl:rotate-180 rtl:group-hover:-translate-x-2" />
               </Link>
