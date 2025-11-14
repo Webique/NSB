@@ -26,7 +26,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-200/50 bg-white/80 shadow-sm backdrop-blur-md transition-all duration-300">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-200/50 bg-white/90 shadow-sm backdrop-blur-md transition-all duration-300">
       {/* Main Header */}
       <div className="layout">
         <div className="flex h-16 items-center justify-between lg:h-20">

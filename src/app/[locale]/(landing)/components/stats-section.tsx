@@ -81,53 +81,84 @@ export default function StatsSection() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section className="bg-white py-24">
-      <div className="container px-4">
+    <section className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-32">
+      {/* Decorative Background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="pattern-grid h-full w-full" />
+      </div>
+      <div className="bg-primary/10 absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" />
+
+      <div className="container relative px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          className="mb-20 text-center"
         >
-          <div className="mb-6 text-6xl font-bold text-gray-200">03</div>
-          <h2 className="mb-8 text-4xl font-bold text-gray-900 md:text-5xl">
+          {/* Section Number */}
+          <div className="mb-8 flex items-center justify-center gap-4">
+            <div className="to-primary/50 bg-linear-to-r h-px w-16 from-transparent" />
+            <div className="text-primary/10 text-8xl font-bold">03</div>
+            <div className="to-primary/50 bg-linear-to-l h-px w-16 from-transparent" />
+          </div>
+
+          <h2 className="mb-6 text-5xl font-bold text-gray-900 md:text-6xl">
             أين وصلت نسب؟
           </h2>
+          <div className="via-primary bg-linear-to-r mx-auto h-1 w-24 from-transparent to-transparent" />
 
-          {/* Main Stats */}
-          <div className="mb-12 grid gap-8 md:grid-cols-2">
+          {/* Main Stats - Hero Numbers */}
+          <div className="mb-16 mt-16 grid gap-12 md:grid-cols-2">
             {mainStats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
+                className="group relative"
               >
-                <div className="text-primary mb-2 text-7xl font-bold md:text-8xl">
-                  <Counter value={stat.value} isInView={isInView} />
-                  {stat.suffix}
-                </div>
-                <div className="text-xl font-medium text-gray-600">
-                  {stat.label}
+                <div className="from-primary/5 to-secondary/5 bg-linear-to-br relative overflow-hidden rounded-3xl p-12 shadow-lg transition-all duration-500 hover:shadow-2xl">
+                  {/* Decorative Circle */}
+                  <div className="bg-primary/10 absolute -right-12 -top-12 h-48 w-48 rounded-full transition-all duration-500 group-hover:scale-150" />
+
+                  <div className="relative text-center">
+                    <div className="from-primary to-secondary bg-linear-to-br mb-4 bg-clip-text text-8xl font-bold text-transparent md:text-9xl">
+                      <Counter value={stat.value} isInView={isInView} />
+                      {stat.suffix}
+                    </div>
+                    <div className="text-2xl font-semibold text-gray-700">
+                      {stat.label}
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Investment Amount */}
+          {/* Investment Amount - Featured */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-16"
+            className="from-primary to-secondary bg-linear-to-br relative mx-auto mb-20 max-w-3xl overflow-hidden rounded-3xl p-12 shadow-2xl"
           >
-            <div className="text-primary text-5xl font-bold md:text-6xl">
-              +450,000,000
+            {/* Decorative Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="pattern-dots h-full w-full" />
             </div>
-            <p className="mt-2 text-xl text-gray-600">
-              مجموع الاستثمارات (ريال)
-            </p>
+
+            <div className="relative text-center text-white">
+              <div className="mb-4 text-6xl font-bold md:text-7xl">
+                +450,000,000
+              </div>
+              <div className="text-2xl font-medium">
+                مجموع الاستثمارات (ريال)
+              </div>
+            </div>
+
+            {/* Decorative Corners */}
+            <div className="absolute left-0 top-0 h-20 w-20 border-l-4 border-t-4 border-white/30" />
+            <div className="absolute bottom-0 right-0 h-20 w-20 border-b-4 border-r-4 border-white/30" />
           </motion.div>
         </motion.div>
 
@@ -139,16 +170,26 @@ export default function StatsSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="rounded-lg border border-gray-200 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md"
+              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="text-primary mb-2 text-4xl font-bold">
-                <Counter value={stat.value} isInView={isInView} />
-                {stat.suffix}
+              {/* Hover Effect */}
+              <div className="from-primary/5 bg-linear-to-br absolute inset-0 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+
+              <div className="relative">
+                <div className="from-primary to-secondary bg-linear-to-br mb-3 bg-clip-text text-4xl font-bold text-transparent">
+                  <Counter value={stat.value} isInView={isInView} />
+                  {stat.suffix}
+                </div>
+                <div className="mb-2 text-sm font-bold text-gray-900">
+                  {stat.label}
+                </div>
+                <div className="text-xs leading-relaxed text-gray-500">
+                  {stat.sublabel}
+                </div>
               </div>
-              <div className="mb-2 text-sm font-bold text-gray-900">
-                {stat.label}
-              </div>
-              <div className="text-xs text-gray-500">{stat.sublabel}</div>
+
+              {/* Bottom Accent */}
+              <div className="from-primary to-secondary bg-linear-to-r absolute bottom-0 left-0 right-0 h-1 opacity-0 transition-opacity group-hover:opacity-100" />
             </motion.div>
           ))}
         </div>

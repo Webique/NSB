@@ -19,22 +19,34 @@ export default function ProcessSection() {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section className="bg-white py-24">
-      <div className="container px-4">
+    <section className="bg-linear-to-b relative overflow-hidden from-white to-gray-50 py-32">
+      {/* Decorative Background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="pattern-dots h-full w-full" />
+      </div>
+
+      <div className="container relative px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          className="mb-20 text-center"
         >
-          <div className="mb-6 text-6xl font-bold text-gray-200">07</div>
-          <h2 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">
+          {/* Section Number */}
+          <div className="mb-8 flex items-center justify-center gap-4">
+            <div className="to-primary/50 bg-linear-to-r h-px w-16 from-transparent" />
+            <div className="text-primary/10 text-8xl font-bold">06</div>
+            <div className="to-primary/50 bg-linear-to-l h-px w-16 from-transparent" />
+          </div>
+
+          <h2 className="mb-6 text-5xl font-bold text-gray-900 md:text-6xl">
             {t("title")}
           </h2>
-          <p className="mx-auto max-w-2xl text-xl font-semibold text-primary">
+          <div className="via-primary bg-linear-to-r mx-auto mb-6 h-1 w-24 from-transparent to-transparent" />
+          <p className="text-primary mx-auto max-w-2xl text-2xl font-semibold">
             {t("subtitle")}
           </p>
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-600">
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-gray-600">
             {t("description")}
           </p>
         </motion.div>
@@ -58,22 +70,35 @@ export default function ProcessSection() {
                   }`}
                 >
                   {/* Content */}
-                  <div className={`flex-1 ${isLeft ? "lg:pr-16 lg:text-right" : "lg:pl-16 lg:text-left"}`}>
-                    <div className="rounded-lg bg-gray-50 p-8">
-                      <div className="mb-4 text-5xl font-bold text-primary">
-                        {step.number}
+                  <div
+                    className={`flex-1 ${isLeft ? "lg:pr-16 lg:text-right" : "lg:pl-16 lg:text-left"}`}
+                  >
+                    <div className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                      {/* Decorative Corner */}
+                      <div className="bg-primary/5 absolute right-0 top-0 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full transition-all duration-500 group-hover:scale-150" />
+
+                      <div className="relative">
+                        <div className="mb-4 flex items-center gap-3">
+                          <div className="from-primary to-secondary bg-linear-to-br flex h-16 w-16 items-center justify-center rounded-xl text-3xl font-bold text-white shadow-lg">
+                            {step.number}
+                          </div>
+                          <div className="from-primary bg-linear-to-r h-1 w-12 to-transparent" />
+                        </div>
+                        <h3 className="mb-3 text-2xl font-bold text-gray-900">
+                          {t(`${step.key}.title` as any)}
+                        </h3>
+                        <p className="text-lg leading-relaxed text-gray-600">
+                          {t(`${step.key}.description` as any)}
+                        </p>
                       </div>
-                      <h3 className="mb-3 text-2xl font-bold text-gray-900">
-                        {t(`${step.key}.title` as any)}
-                      </h3>
-                      <p className="text-lg text-gray-600">
-                        {t(`${step.key}.description` as any)}
-                      </p>
+
+                      {/* Bottom Accent */}
+                      <div className="from-primary to-secondary bg-linear-to-r absolute bottom-0 left-0 right-0 h-1 opacity-0 transition-opacity group-hover:opacity-100" />
                     </div>
                   </div>
 
                   {/* Center Dot */}
-                  <div className="absolute left-1/2 hidden h-6 w-6 -translate-x-1/2 rounded-full border-4 border-white bg-primary shadow-lg lg:block" />
+                  <div className="from-primary to-secondary bg-linear-to-br absolute left-1/2 hidden h-8 w-8 -translate-x-1/2 rounded-full border-4 border-white shadow-lg lg:block" />
 
                   {/* Spacer */}
                   <div className="hidden flex-1 lg:block" />

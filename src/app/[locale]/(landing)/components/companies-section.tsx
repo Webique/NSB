@@ -27,11 +27,14 @@ const CompaniesSection = () => {
   ];
 
   return (
-    <section id="companies" className="relative bg-white py-24">
+    <section
+      id="companies"
+      className="relative overflow-hidden bg-gray-50 py-32"
+    >
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="bg-primary/5 absolute left-20 top-20 h-64 w-64 rounded-full"></div>
-        <div className="bg-primary/5 absolute bottom-20 right-20 h-48 w-48 rounded-full"></div>
+      <div className="absolute inset-0">
+        <div className="bg-secondary/5 absolute left-0 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"></div>
+        <div className="bg-primary/5 absolute bottom-0 right-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative">
@@ -41,13 +44,20 @@ const CompaniesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="layout mb-16 text-center"
+          className="container mb-20 px-4 text-center"
         >
-          <h2 className="text-primary mb-4 text-4xl font-bold md:text-5xl">
+          {/* Section Number */}
+          <div className="mb-8 flex items-center justify-center gap-4">
+            <div className="to-primary/50 bg-linear-to-r h-px w-16 from-transparent" />
+            <div className="text-primary/10 text-8xl font-bold">09</div>
+            <div className="to-primary/50 bg-linear-to-l h-px w-16 from-transparent" />
+          </div>
+
+          <h2 className="mb-6 text-5xl font-bold text-gray-900 md:text-6xl">
             {t("title")}
           </h2>
-          <div className="bg-primary mx-auto mb-6 h-1 w-16 rounded-full"></div>
-          <p className="mx-auto max-w-2xl text-xl text-gray-600">
+          <div className="via-primary bg-linear-to-r mx-auto mb-6 h-1 w-24 from-transparent to-transparent"></div>
+          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
             {t("description")}
           </p>
         </m.div>
