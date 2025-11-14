@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
 
@@ -16,7 +16,7 @@ export default function AboutSection() {
       <div className="container relative px-4">
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Text Content */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -46,7 +46,7 @@ export default function AboutSection() {
 
             {/* Values with Enhanced Design */}
             <div className="space-y-8">
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -65,9 +65,9 @@ export default function AboutSection() {
                     {t("visionText")}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
 
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -86,12 +86,12 @@ export default function AboutSection() {
                     {t("missionText")}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Image with Decorative Frame */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -115,7 +115,7 @@ export default function AboutSection() {
             </div>
 
             {/* Floating Accent */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -128,8 +128,8 @@ export default function AboutSection() {
                   {t("yearsOfExperience")}
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </div>
       </div>
     </section>

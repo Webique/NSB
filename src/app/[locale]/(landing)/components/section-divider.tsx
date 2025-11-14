@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 
 interface SectionDividerProps {
   variant?: "primary" | "secondary" | "gradient";
@@ -24,14 +24,14 @@ export default function SectionDivider({
 
   return (
     <div className="relative py-8">
-      <motion.div
+      <m.div
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeInOut" }}
         className={`bg-linear-to-r mx-auto h-px w-full max-w-4xl ${getGradient()}`}
       />
-      <motion.div
+      <m.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}

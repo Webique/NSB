@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight, Mail, Phone } from "lucide-react";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -15,13 +15,13 @@ export default function CTASection() {
   return (
     <section className="bg-linear-to-b relative overflow-hidden from-gray-50 via-white to-gray-50 py-40">
       {/* Decorative Elements */}
-      <motion.div
+      <m.div
         className="absolute inset-0 z-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <motion.div
+        <m.div
           variants={{
             hidden: { opacity: 0, scale: 0 },
             visible: { opacity: 0.15, scale: 1 }
@@ -29,7 +29,7 @@ export default function CTASection() {
           transition={{ duration: 1.5 }}
           className="bg-primary absolute -start-40 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full blur-3xl"
         />
-        <motion.div
+        <m.div
           variants={{
             hidden: { opacity: 0, scale: 0 },
             visible: { opacity: 0.15, scale: 1 }
@@ -37,11 +37,11 @@ export default function CTASection() {
           transition={{ duration: 1.5, delay: 0.3 }}
           className="bg-secondary absolute -end-40 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full blur-3xl"
         />
-      </motion.div>
+      </m.div>
 
       {/* Content */}
       <div className="container relative z-10 px-4">
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -53,7 +53,7 @@ export default function CTASection() {
           className="mx-auto max-w-4xl text-center"
         >
           {/* Decorative Top Line */}
-          <motion.div
+          <m.div
             variants={{
               hidden: { scaleX: 0 },
               visible: { scaleX: 1 }
@@ -71,7 +71,7 @@ export default function CTASection() {
           </p>
 
           {/* CTA Button */}
-          <motion.div
+          <m.div
             variants={{
               hidden: { opacity: 0, scale: 0.8 },
               visible: { opacity: 1, scale: 1 }
@@ -89,10 +89,10 @@ export default function CTASection() {
                 <ArrowRight className="h-6 w-6 transition-transform group-hover:translate-x-2 rtl:rotate-180 rtl:group-hover:-translate-x-2" />
               </Link>
             </Button>
-          </motion.div>
+          </m.div>
 
           {/* Contact Cards */}
-          <motion.div
+          <m.div
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 }
@@ -162,10 +162,10 @@ export default function CTASection() {
                 </div>
               </div>
             </a>
-          </motion.div>
+          </m.div>
 
           {/* Decorative Bottom Line */}
-          <motion.div
+          <m.div
             variants={{
               hidden: { scaleX: 0 },
               visible: { scaleX: 1 }
@@ -173,7 +173,7 @@ export default function CTASection() {
             transition={{ duration: 1, delay: 0.8 }}
             className="via-primary bg-linear-to-r mx-auto mt-12 h-1 w-32 from-transparent to-transparent"
           />
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

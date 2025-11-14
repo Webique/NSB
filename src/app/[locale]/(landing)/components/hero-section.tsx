@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -39,13 +39,13 @@ export default function HeroSection() {
 
       {/* Decorative Shapes */}
       <div className="absolute inset-0 z-0">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 0.15, scale: 1 }}
           transition={{ duration: 1.5 }}
           className="bg-primary absolute end-0 top-1/4 h-[700px] w-[700px] rounded-full blur-3xl"
         />
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 0.15, scale: 1 }}
           transition={{ duration: 1.5, delay: 0.3 }}
@@ -57,16 +57,16 @@ export default function HeroSection() {
       <div className="container relative z-10 px-4 py-20 md:py-24">
         <div className="mx-auto max-w-6xl text-center">
           {/* Logo/Brand Mark */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             className="mb-6 md:mb-8"
           >
             <div className="via-primary bg-linear-to-r mx-auto mb-4 h-1 w-24 from-transparent to-transparent md:mb-6 md:w-32" />
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -74,34 +74,34 @@ export default function HeroSection() {
             <h1 className="mb-4 text-4xl font-bold leading-tight text-white drop-shadow-2xl md:mb-6 md:text-5xl lg:text-6xl">
               {t("title")}
             </h1>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-primary mb-4 text-lg font-semibold [text-shadow:0_2px_8px_rgb(0_0_0/60%)] md:mb-6 md:text-xl lg:text-2xl"
           >
             {t("subtitle")}
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="via-primary bg-linear-to-r mx-auto mb-4 h-px w-32 from-transparent to-transparent md:mb-6 md:w-40"
           />
 
-          <motion.p
+          <m.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-gray-200 [text-shadow:0_2px_8px_rgb(0_0_0/60%)] md:mb-12 md:text-lg lg:text-xl"
           >
             {t("description")}
-          </motion.p>
+          </m.p>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -127,12 +127,12 @@ export default function HeroSection() {
                 {t("ctaSecondary")}
               </Link>
             </Button>
-          </motion.div>
+          </m.div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <motion.button
+      <m.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
@@ -140,14 +140,14 @@ export default function HeroSection() {
         className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 cursor-pointer sm:bottom-10"
         aria-label="Scroll to content"
       >
-        <motion.a
+        <m.a
           animate={{ y: [0, 12, 0] }}
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center gap-3"
           href="#about"
         >
           <div className="border-primary/50 flex h-12 w-8 items-start justify-center rounded-full border-2 p-2">
-            <motion.div
+            <m.div
               animate={{ y: [0, 12, 0] }}
               transition={{
                 duration: 1.5,
@@ -157,8 +157,8 @@ export default function HeroSection() {
               className="bg-primary h-2 w-2 rounded-full"
             />
           </div>
-        </motion.a>
-      </motion.button>
+        </m.a>
+      </m.button>
     </section>
   );
 }

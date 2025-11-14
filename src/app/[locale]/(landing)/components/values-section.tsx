@@ -1,7 +1,7 @@
 "use client";
 
 import { Award, Layers, Lightbulb } from "lucide-react";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
 export default function ValuesSection() {
@@ -36,7 +36,7 @@ export default function ValuesSection() {
       </div>
 
       <div className="container relative px-4">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -54,11 +54,11 @@ export default function ValuesSection() {
             {t("title")}
           </h2>
           <div className="via-primary bg-linear-to-r mx-auto h-1 w-24 from-transparent to-transparent" />
-        </motion.div>
+        </m.div>
 
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
           {values.map((value, index) => (
-            <motion.div
+            <m.div
               key={value.key}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -94,12 +94,12 @@ export default function ValuesSection() {
                 {/* Decorative Bottom Line */}
                 <div className="via-primary/50 bg-linear-to-r absolute inset-x-0 bottom-0 h-1 from-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
         {/* Bottom Decorative Element */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}

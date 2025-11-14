@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
 const steps = [
@@ -23,7 +23,7 @@ export default function ProcessSection() {
       </div>
 
       <div className="container relative px-4">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
@@ -47,7 +47,7 @@ export default function ProcessSection() {
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-gray-600">
             {t("description")}
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="relative">
           {/* Center Line */}
@@ -58,7 +58,7 @@ export default function ProcessSection() {
               const isLeft = index % 2 === 0;
 
               return (
-                <motion.div
+                <m.div
                   key={step.key}
                   initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -101,7 +101,7 @@ export default function ProcessSection() {
 
                   {/* Spacer */}
                   <div className="hidden flex-1 lg:block" />
-                </motion.div>
+                </m.div>
               );
             })}
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
 
@@ -45,7 +45,7 @@ export default function ServicesSection() {
       <div className="bg-secondary/5 absolute bottom-0 end-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full blur-3xl" />
 
       <div className="container relative px-4">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -66,11 +66,11 @@ export default function ServicesSection() {
           <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
             {t("subtitle")}
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <motion.div
+            <m.div
               key={service.title}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ export default function ServicesSection() {
                 {/* Bottom Accent Line */}
                 <div className="from-primary via-secondary to-primary bg-linear-to-r absolute inset-x-0 bottom-0 h-2 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

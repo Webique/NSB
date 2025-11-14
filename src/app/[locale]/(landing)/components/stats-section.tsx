@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
+import { useInView } from "motion/react";
+import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
@@ -113,7 +114,7 @@ export default function StatsSection() {
       <div className="bg-primary/10 absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" />
 
       <div className="container relative px-4">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -135,7 +136,7 @@ export default function StatsSection() {
           {/* Main Stats - Hero Numbers */}
           <div className="mb-16 mt-16 grid gap-12 md:grid-cols-2">
             {mainStats.map((stat, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -157,12 +158,12 @@ export default function StatsSection() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
           {/* Investment Amount - Featured */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -186,13 +187,13 @@ export default function StatsSection() {
             {/* Decorative Corners */}
             <div className="absolute start-0 top-0 h-20 w-20 border-l-4 border-t-4 border-white/30" />
             <div className="absolute bottom-0 end-0 h-20 w-20 border-b-4 border-r-4 border-white/30" />
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
 
         {/* Detailed Stats Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {detailedStats.map((stat, index) => (
-            <motion.div
+            <m.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -218,7 +219,7 @@ export default function StatsSection() {
 
               {/* Bottom Accent */}
               <div className="from-primary to-secondary bg-linear-to-r absolute bottom-0 end-0 start-0 h-1 opacity-0 transition-opacity group-hover:opacity-100" />
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>
