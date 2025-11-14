@@ -90,6 +90,7 @@ const CompaniesSection = () => {
                     alt={`company ${index + 1}`}
                     width={company.width}
                     height={company.height}
+                    placeholder="empty"
                   />
                 </CarouselItem>
               )

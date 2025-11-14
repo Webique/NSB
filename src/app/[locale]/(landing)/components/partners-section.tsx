@@ -94,6 +94,7 @@ const PartnersSection = () => {
                   alt={`partner ${index + 1}`}
                   width={partner.width}
                   height={partner.height}
+                  placeholder="empty"
                 />
               </CarouselItem>
             ))}

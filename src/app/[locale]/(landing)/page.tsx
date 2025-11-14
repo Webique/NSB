@@ -3,18 +3,19 @@ import type { Locale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
-import AboutSection from "@/app/[locale]/(landing)/components/about-section";
-import CompaniesSection from "@/app/[locale]/(landing)/components/companies-section";
-import CTASection from "@/app/[locale]/(landing)/components/cta-section";
-import HeroSection from "@/app/[locale]/(landing)/components/hero-section";
-import PartnersSection from "@/app/[locale]/(landing)/components/partners-section";
-import PortfolioSection from "@/app/[locale]/(landing)/components/portfolio-section";
-import ProcessSection from "@/app/[locale]/(landing)/components/process-section";
-import StatsSection from "@/app/[locale]/(landing)/components/stats-section";
-import ValuesSection from "@/app/[locale]/(landing)/components/values-section";
 import WhatsAppFloat from "@/components/whats-app-float";
 
+import AboutSection from "./components/about-section";
+import CompaniesSection from "./components/companies-section";
+import CTASection from "./components/cta-section";
+import HeroSection from "./components/hero-section";
+import PartnersSection from "./components/partners-section";
+import PortfolioSection from "./components/portfolio-section";
+import ProcessSection from "./components/process-section";
 import SectionDivider from "./components/section-divider";
+import ServicesSection from "./components/services-section";
+import StatsSection from "./components/stats-section";
+import ValuesSection from "./components/values-section";
 
 export default function IndexPage({ params }: PageProps<"/[locale]">) {
   const { locale } = use(params);
@@ -32,7 +33,7 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
       <SectionDivider variant="secondary" />
       <StatsSection />
       <SectionDivider variant="primary" />
-      {/* <ServicesSection /> */}
+      <ServicesSection />
       <SectionDivider variant="gradient" />
       <ProcessSection />
       <SectionDivider variant="secondary" />
