@@ -11,27 +11,27 @@ export default function ServicesSection() {
     {
       title: t("buying.title"),
       description: t("buying.description"),
-      image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-089.png"
+      image: "/images/services/1.jpg"
     },
     {
       title: t("selling.title"),
       description: t("selling.description"),
-      image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-091.png"
+      image: "/images/services/2.jpg"
     },
     {
       title: t("consulting.title"),
       description: t("consulting.description"),
-      image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-093.png"
+      image: "/images/services/3.jpg"
     },
     {
       title: t("management.title"),
       description: t("management.description"),
-      image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-095.png"
+      image: "/images/services/4.jpg"
     },
     {
       title: t("investment.title"),
       description: t("investment.description"),
-      image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-006.jpg"
+      image: "/images/services/5.jpg"
     }
   ];
 
