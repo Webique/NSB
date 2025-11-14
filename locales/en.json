@@ -153,9 +153,66 @@
       }
     },
     "Portfolio": {
-      "title": "Featured Properties",
-      "subtitle": "Discover Our Premium Collection",
-      "viewAll": "View All Properties"
+      "title": "Featured Projects",
+      "subtitle": "Structures that speak and draw a picture worthy of our partners with perfection",
+      "viewAll": "View All Properties",
+      "projects": [
+        {
+          "title": "Al Aziziyah Hotel",
+          "subtitle": "Spacious location near the Grand Mosque",
+          "image": "/images/portfolio/1.jpg"
+        },
+        {
+          "title": "Shumukh Al Madinah Hotel",
+          "subtitle": "Prime location next to the Prophet's Mosque",
+          "image": "/images/portfolio/2.jpg"
+        },
+        {
+          "title": "Timandra Hotel",
+          "subtitle": "Unique location near the Red Sea",
+          "image": "/images/portfolio/3.jpg"
+        },
+        {
+          "title": "Tetra Complex",
+          "subtitle": "Outstanding investment vision shining in prime locations",
+          "image": "/images/portfolio/4.jpg"
+        },
+        {
+          "title": "Al Awali Apartments",
+          "subtitle": "Unique residential piece offering exceptional living experience",
+          "image": "/images/portfolio/5.jpg"
+        },
+        {
+          "title": "Namar Villas",
+          "subtitle": "Reality where you live the best moments with your family",
+          "image": "/images/portfolio/6.jpg"
+        },
+        {
+          "title": "Al Mahdiyah Villas",
+          "subtitle": "The ideal place for family stability",
+          "image": "/images/portfolio/7.jpg"
+        },
+        {
+          "title": "Al Badiah Floors",
+          "subtitle": "Model residential project that catches the eye",
+          "image": "/images/portfolio/8.jpg"
+        },
+        {
+          "title": "Al Faiha Apartments",
+          "subtitle": "Privacy of residence and comfort of place",
+          "image": "/images/portfolio/9.jpg"
+        },
+        {
+          "title": "Al Shawqiyah Buildings",
+          "subtitle": "Vitality of place in the Holy Capital",
+          "image": "/images/portfolio/10.jpg"
+        },
+        {
+          "title": "Al Qanadil Fund",
+          "subtitle": "Unique destination for creating distinguished residential projects",
+          "image": "/images/portfolio/11.jpg"
+        }
+      ]
     },
     "Process": {
       "title": "How We Work",

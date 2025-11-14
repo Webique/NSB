@@ -153,9 +153,66 @@
       }
     },
     "Portfolio": {
-      "title": "عقارات مميزة",
-      "subtitle": "اكتشف مجموعتنا المميزة",
-      "viewAll": "عرض جميع العقارات"
+      "title": "أبرز المشاريع",
+      "subtitle": "صروح تتحدث وترسم لشركائنا صورة تليق بهم بالإتقان",
+      "viewAll": "عرض جميع العقارات",
+      "projects": [
+        {
+          "title": "فندق العزيزية",
+          "subtitle": "رحابة المكان بالقرب من المسجد الحرام",
+          "image": "/images/portfolio/1.jpg"
+        },
+        {
+          "title": "فندق شموخ المدينة",
+          "subtitle": "الموقع الحيوي بجوار المسجد النبوي الشريف",
+          "image": "/images/portfolio/2.jpg"
+        },
+        {
+          "title": "فندق تيماندرا",
+          "subtitle": "موقع فريد بالقرب من البحر الأحمر",
+          "image": "/images/portfolio/3.jpg"
+        },
+        {
+          "title": "مجمع تترا",
+          "subtitle": "رؤية استثمارية بارزة تتألق بأبهى المواقع",
+          "image": "/images/portfolio/4.jpg"
+        },
+        {
+          "title": "شقق العوالي",
+          "subtitle": "قطعة سكنية فريدة تمنحك تجربة عيش استثنائية",
+          "image": "/images/portfolio/5.jpg"
+        },
+        {
+          "title": "فلل نمار",
+          "subtitle": "واقع تعيش فيه مع أسرتك أجمل الأوقات",
+          "image": "/images/portfolio/6.jpg"
+        },
+        {
+          "title": "فلل المهدية",
+          "subtitle": "المكان المثالي لاستقرار العائلة",
+          "image": "/images/portfolio/7.jpg"
+        },
+        {
+          "title": "أدوار البديعة",
+          "subtitle": "مشروع سكني نموذجي يلفت الأنظار",
+          "image": "/images/portfolio/8.jpg"
+        },
+        {
+          "title": "شقق الفيحاء",
+          "subtitle": "خصوصية المسكن وراحة المكان",
+          "image": "/images/portfolio/9.jpg"
+        },
+        {
+          "title": "عماير الشوقية",
+          "subtitle": "حيوية المكان في العاصمة المقدسة",
+          "image": "/images/portfolio/10.jpg"
+        },
+        {
+          "title": "صندوق القناديل",
+          "subtitle": "وجهة فريدة لإنشاء مشاريع سكنية متميزة",
+          "image": "/images/portfolio/11.jpg"
+        }
+      ]
     },
     "Process": {
       "title": "دورة العمل",

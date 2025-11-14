@@ -4,41 +4,15 @@ import { motion } from "motion/react";
 import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
 
-const projects = [
-  {
-    title: "فندق شموخ المدينة",
-    subtitle: "الموقع الحيوي بجوار المسجد النبوي الشريف",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-061.jpg"
-  },
-  {
-    title: "فندق العزيزية",
-    subtitle: "رحابة المكان بالقرب من المسجد الحرام",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-063.jpg"
-  },
-  {
-    title: "مجمع تترا",
-    subtitle: "رؤية استثمارية بارزة تتألق بأبهى المواقع",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-064.jpg"
-  },
-  {
-    title: "فندق تيماندرا",
-    subtitle: "موقع فريد بالقرب من البحر الأحمر",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-065.jpg"
-  },
-  {
-    title: "فلل نمار",
-    subtitle: "واقع تعيش فيه مع أسرتك أجمل الأوقات",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-066.jpg"
-  },
-  {
-    title: "شقق العوالي",
-    subtitle: "قطعة سكنية فريدة تمنحك تجربة عيش استثنائية",
-    image: "/images/الملف التعريفي-نسب العقارية(1).pdf-image-067.jpg"
-  }
-];
+type Project = {
+  title: string;
+  subtitle: string;
+  image: string;
+};
 
 export default function PortfolioSection() {
   const t = useTranslations("IndexPage.Portfolio");
+  const projects: Project[] = t.raw("projects");
 
   return (
     <section className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-24">
@@ -62,11 +36,11 @@ export default function PortfolioSection() {
           </div>
 
           <h2 className="mb-6 text-5xl font-bold text-gray-900 md:text-6xl">
-            أبرز المشاريع
+            {t("title")}
           </h2>
           <div className="via-primary bg-linear-to-r mx-auto mb-6 h-1 w-24 from-transparent to-transparent" />
           <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
-            صروح تتحدث وترسم لشركائنا صورة تليق بهم بالإتقان
+            {t("subtitle")}
           </p>
         </motion.div>
 
