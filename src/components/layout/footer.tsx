@@ -33,8 +33,6 @@ const Footer = () => {
       <div className="absolute inset-0 opacity-5">
         <div className="pattern-dots h-full w-full"></div>
       </div>
-      <div className="bg-primary/10 absolute left-0 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"></div>
-      <div className="bg-secondary/10 absolute bottom-0 right-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full blur-3xl"></div>
 
       <div className="container relative mx-auto px-4 py-20 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
