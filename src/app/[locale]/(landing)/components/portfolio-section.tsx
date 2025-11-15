@@ -15,7 +15,10 @@ export default function PortfolioSection() {
   const projects: Project[] = t.raw("projects");
 
   return (
-    <section className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-24">
+    <section
+      id="portfolio"
+      className="bg-linear-to-b relative overflow-hidden from-gray-50 to-white py-24"
+    >
       {/* Decorative Background */}
       <div className="bg-primary/5 absolute start-0 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" />
       <div className="bg-secondary/5 absolute bottom-0 end-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full blur-3xl" />

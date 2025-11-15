@@ -309,6 +309,7 @@
       "about": "من نحن",
       "services": "الخدمات",
       "myservices": "خدماتنا",
+      "projects": "المشاريع",
       "portfolio": "الأعمال",
       "contact": "تواصل",
       "contactme": "تواصل معنا"
@@ -332,9 +333,11 @@
     "location": "الموقع",
     "copyright": "© {year} نسب العقارية. جميع الحقوق محفوظة",
     "companyDescription": "نسب العقارية هي شريكك الموثوق للحلول العقارية المميزة. نقدم خدمات عقارية شاملة تشمل الشراء والبيع والاستشارات وإدارة العقارات.",
-    "marketing": "شراء العقارات",
-    "development": "بيع العقارات",
-    "consulting": "الاستشارات العقارية",
+    "realEstateDevelopment": "التطوير العقاري",
+    "realEstateMarketing": "التسويق العقاري",
+    "propertyAndFacilityManagement": "إدارة الممتلكات والمرافق",
+    "infrastructureAndContracting": "البنية التحتية والمقاولات",
+    "landInvestment": "استثمار الأراضي",
     "saudiArabia": "المملكة العربية السعودية",
     "available24_7": "متاح على مدار الساعة",
     "socialMedia": {

@@ -19,9 +19,11 @@ const Footer = () => {
   ];
 
   const services = [
-    { label: t("marketing"), href: "#services" },
-    { label: t("development"), href: "#services" },
-    { label: t("consulting"), href: "#services" }
+    { label: t("realEstateDevelopment"), href: "#services" },
+    { label: t("realEstateMarketing"), href: "#services" },
+    { label: t("propertyAndFacilityManagement"), href: "#services" },
+    { label: t("infrastructureAndContracting"), href: "#services" },
+    { label: t("landInvestment"), href: "#services" }
   ];
 
   return (

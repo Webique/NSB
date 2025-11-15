@@ -300,6 +300,7 @@
       "about": "About",
       "services": "Services",
       "myservices": "Our Services",
+      "projects": "Projects",
       "portfolio": "Portfolio",
       "contact": "Contact",
       "contactme": "Contact Us"
@@ -323,9 +324,11 @@
     "location": "Location",
     "copyright": "© {year} NSB Real Estate. All rights reserved",
     "companyDescription": "NSB Real Estate is your trusted partner for premium property solutions. We provide comprehensive real estate services including buying, selling, consulting, and property management.",
-    "marketing": "Property Buying",
-    "development": "Property Selling",
-    "consulting": "Real Estate Consulting",
+    "realEstateDevelopment": "Real Estate Development",
+    "realEstateMarketing": "Real Estate Marketing",
+    "propertyAndFacilityManagement": "Property & Facility Management",
+    "infrastructureAndContracting": "Infrastructure & Contracting",
+    "landInvestment": "Land Investment",
     "saudiArabia": "Kingdom of Saudi Arabia",
     "available24_7": "Available 24/7",
     "socialMedia": {
